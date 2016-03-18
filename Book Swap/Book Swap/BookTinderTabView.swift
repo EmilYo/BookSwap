@@ -13,6 +13,7 @@ class BookTinderTabView: UIView {
     @IBOutlet weak var bookImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
 
     required override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,10 +22,11 @@ class BookTinderTabView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        prepareComponent()
     }
     
     func prepareComponent() {
-        
+
     }
 
         

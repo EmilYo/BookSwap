@@ -18,6 +18,9 @@ extension UIColor {
     /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f5a623"></span>
     /// Alpha: 100% <br/> (0xf5a623ff)
     case First
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#ffffff"></span>
+    /// Alpha: 100% <br/> (0xffffffff)
+    case MainColor
     /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9013fe"></span>
     /// Alpha: 100% <br/> (0x9013feff)
     case Second
@@ -37,6 +40,7 @@ extension UIColor {
     var rgbaValue: UInt32! {
       switch self {
       case .First: return 0xf5a623ff
+      case .MainColor: return 0xffffffff
       case .Second: return 0x9013feff
       case .TabBarIcon: return 0x566d8cff
       case .TabBarSelectedIcon: return 0xf26457ff

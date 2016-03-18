@@ -13,6 +13,8 @@ class MatchViewController: BSViewController {
     @IBOutlet weak var bookKolodaView: BookKolodaView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = L10n.LocTabMatch.string
         // Do any additional setup after loading the view.
     }
 

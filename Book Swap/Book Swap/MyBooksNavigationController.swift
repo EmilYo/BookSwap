@@ -24,12 +24,12 @@ class MyBooksNavigationController: BSNavigationController {
     
     func configureTabBar() {
         let tabAnimation = RAMBounceAnimation()
-        tabAnimation.textSelectedColor = UIColor(named: .Second)
-        tabAnimation.iconSelectedColor = UIColor(named: .Second)
+        tabAnimation.textSelectedColor = UIColor(named: .TabBarSelectedText)
+        tabAnimation.iconSelectedColor = UIColor(named: .TabBarSelectedIcon)
         
-        let tabBarItem = RAMAnimatedTabBarItem(title: "MyBooks", image: UIImage.Asset.TabMyBooks.image, selectedImage: nil)
-        tabBarItem.textColor = UIColor.whiteColor()
-        tabBarItem.iconColor = UIColor.whiteColor()
+        let tabBarItem = RAMAnimatedTabBarItem(title: L10n.LocTabMyBooks.string, image: UIImage.Asset.TabMyBooks.image, selectedImage: nil)
+        tabBarItem.textColor = UIColor(named: .TabBarText)
+        tabBarItem.iconColor = UIColor(named: .TabBarIcon)
         tabBarItem.animation = tabAnimation
         
         self.tabBarItem = tabBarItem

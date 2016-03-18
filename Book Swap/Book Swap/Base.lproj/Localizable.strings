@@ -1,1 +1,7 @@
 "loc_login_title" = "Login";
+
+"loc_tab_my_books" = "My Books";
+"loc_tab_wanted" = "Wanted";
+"loc_tab_swap" = "Swap";
+"loc_tab_match" = "Match";
+"loc_tab_profile" = "Profile";

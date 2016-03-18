@@ -20,7 +20,9 @@ class MyBooksViewController: BSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.title = L10n.LocTabMyBooks.string
+        
         bookViewModel.offeredBooks { (error) -> Void in
             if error != nil {
                 //TODO: Handle error

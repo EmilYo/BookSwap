@@ -13,7 +13,6 @@ class SwapNavigationController: BSNavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -24,12 +23,12 @@ class SwapNavigationController: BSNavigationController {
     
     func configureTabBar() {
         let tabAnimation = RAMBounceAnimation()
-        tabAnimation.textSelectedColor = UIColor(named: .Second)
-        tabAnimation.iconSelectedColor = UIColor(named: .Second)
+        tabAnimation.textSelectedColor = UIColor(named: .TabBarSelectedText)
+        tabAnimation.iconSelectedColor = UIColor(named: .TabBarSelectedIcon)
         
-        let tabBarItem = RAMAnimatedTabBarItem(title: "Swap", image: UIImage.Asset.TabSwap.image, selectedImage: nil)
-        tabBarItem.textColor = UIColor.whiteColor()
-        tabBarItem.iconColor = UIColor.whiteColor()
+        let tabBarItem = RAMAnimatedTabBarItem(title: L10n.LocTabSwap.string, image: UIImage.Asset.TabSwap.image, selectedImage: nil)
+        tabBarItem.textColor = UIColor(named: .TabBarText)
+        tabBarItem.iconColor = UIColor(named: .TabBarIcon)
         tabBarItem.animation = tabAnimation
         
         self.tabBarItem = tabBarItem

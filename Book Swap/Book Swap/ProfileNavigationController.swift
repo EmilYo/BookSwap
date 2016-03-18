@@ -24,12 +24,12 @@ class ProfileNavigationController: BSNavigationController {
     
     func configureTabBar() {
         let tabAnimation = RAMBounceAnimation()
-        tabAnimation.textSelectedColor = UIColor(named: .Second)
-        tabAnimation.iconSelectedColor = UIColor(named: .Second)
-        
-        let tabBarItem = RAMAnimatedTabBarItem(title: "Profile", image: UIImage.Asset.TabAccount.image, selectedImage: nil)
-        tabBarItem.textColor = UIColor.whiteColor()
-        tabBarItem.iconColor = UIColor.whiteColor()
+        tabAnimation.textSelectedColor = UIColor(named: .TabBarSelectedText)
+        tabAnimation.iconSelectedColor = UIColor(named: .TabBarSelectedIcon)
+
+        let tabBarItem = RAMAnimatedTabBarItem(title: L10n.LocTabProfile.string, image: UIImage.Asset.TabAccount.image, selectedImage: nil)
+        tabBarItem.textColor = UIColor(named: .TabBarText)
+        tabBarItem.iconColor = UIColor(named: .TabBarIcon)
         tabBarItem.animation = tabAnimation
         
         self.tabBarItem = tabBarItem

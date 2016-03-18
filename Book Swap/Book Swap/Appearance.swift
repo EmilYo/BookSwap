@@ -12,14 +12,14 @@ import AFImageHelper
 class Appearance {
     static func configure() {
 //        UINavigationBar.appearance().tintColor = UIColor(named: .Second)
-        UINavigationBar.appearance().setBackgroundImage(UIImage(color: UIColor(named: .First).colorWithAlphaComponent(0.8)), forBarMetrics: .Default)
+        UINavigationBar.appearance().setBackgroundImage(UIImage(color: UIColor(named: .MainColor).colorWithAlphaComponent(0.8)), forBarMetrics: .Default)
         UINavigationBar.appearance().titleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor.whiteColor(),
+            NSForegroundColorAttributeName: UIColor(named: .TabBarSelectedText),
             NSFontAttributeName: UIFont.systemFontOfSize(17, weight: UIFontWeightRegular)
         ]
         UINavigationBar.appearance().shadowImage = UIImage()
-        UITabBar.appearance().tintColor = UIColor(named: .First)
-        UITabBar.appearance().barTintColor = UIColor(named: .First)
+        UITabBar.appearance().tintColor = UIColor(named: .MainColor)
+        UITabBar.appearance().barTintColor = UIColor(named: .MainColor)
         
     }
 }
