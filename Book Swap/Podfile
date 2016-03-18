@@ -7,3 +7,6 @@ pod 'SnapKit', '~> 0.16'
 pod 'PromiseKit/CorePromise', '~> 3.0'
 pod 'FBSDKCoreKit', '~> 4.9'
 pod 'FBSDKLoginKit', '~> 4.9'
+
+#UI
+pod 'RAMAnimatedTabBarController', '~> 1.2.2'

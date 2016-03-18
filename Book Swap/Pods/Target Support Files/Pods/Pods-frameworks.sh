@@ -88,6 +88,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/PromiseKit.framework"
+  install_framework "Pods/RAMAnimatedTabBarController.framework"
   install_framework "Pods/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -95,5 +96,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
   install_framework "Pods/PromiseKit.framework"
+  install_framework "Pods/RAMAnimatedTabBarController.framework"
   install_framework "Pods/SnapKit.framework"
 fi
