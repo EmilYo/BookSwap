@@ -23,8 +23,6 @@ build/
 # AppCode
 .idea
 
-/Pods
-
 tutorial.mp4
 
 report.xml
