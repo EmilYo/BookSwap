@@ -13,7 +13,6 @@ PODS:
   - FBSDKLoginKit (4.10.1):
     - FBSDKCoreKit
   - Gloss (0.7.1)
-  - GradientView (2.1.0)
   - HanekeSwift (0.10.1)
   - Koloda (2.0.10):
     - pop (~> 1.0)
@@ -31,7 +30,6 @@ DEPENDENCIES:
   - FBSDKCoreKit (~> 4.9)
   - FBSDKLoginKit (~> 4.9)
   - Gloss (~> 0.7)
-  - GradientView (from `https://github.com/EmilYo/GradientView.git`)
   - HanekeSwift (~> 0.10)
   - Koloda (~> 2.0)
   - PromiseKit/CorePromise (~> 3.0)
@@ -39,15 +37,6 @@ DEPENDENCIES:
   - SnapKit (~> 0.16)
   - Timberjack (~> 0.0)
   - Timepiece (~> 0.4)
-
-EXTERNAL SOURCES:
-  GradientView:
-    :git: https://github.com/EmilYo/GradientView.git
-
-CHECKOUT OPTIONS:
-  GradientView:
-    :commit: d2c1817df7402307c7271089c5d45166a8eda1db
-    :git: https://github.com/EmilYo/GradientView.git
 
 SPEC CHECKSUMS:
   AFImageHelper: 77a89f76b410655928b757a36627a66c1eb67fc2
@@ -57,7 +46,6 @@ SPEC CHECKSUMS:
   FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
   Gloss: e674d7aa06a7e292a591d0d39a759b826daf503e
-  GradientView: 4a961b8e9e1787beaf6880b9fc2dd08c6345533d
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce

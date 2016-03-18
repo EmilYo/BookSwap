@@ -23,7 +23,7 @@ class MyBooksViewController: BSViewController {
         super.viewDidLoad()
         
         navigationItem.title = L10n.LocTabMyBooks.string
-        
+        automaticallyAdjustsScrollViewInsets = false
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")
 
@@ -59,10 +59,7 @@ class MyBooksViewController: BSViewController {
 
 extension MyBooksViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if let books = bookViewModel.books {
-            return books.count
-        }
-        return 0
+        return bookViewModel.books?.count ?? 0
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
