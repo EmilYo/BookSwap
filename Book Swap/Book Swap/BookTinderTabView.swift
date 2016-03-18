@@ -11,6 +11,8 @@ import SnapKit
 
 class BookTinderTabView: UIView {
     @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
 
     required override init(frame: CGRect) {
         super.init(frame: frame)

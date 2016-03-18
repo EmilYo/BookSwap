@@ -66,7 +66,9 @@
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <connections>
+                <outlet property="authorLabel" destination="gnW-CH-YJo" id="G8H-gJ-aVB"/>
                 <outlet property="bookImageView" destination="jDH-55-8N7" id="fTB-fa-svj"/>
+                <outlet property="titleLabel" destination="QPO-XY-cYr" id="kmD-fC-a6Z"/>
             </connections>
             <point key="canvasLocation" x="90.5" y="155.5"/>
         </view>

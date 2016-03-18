@@ -22,6 +22,7 @@ class MainTabBarViewController: RAMAnimatedTabBarController {
         configureTabBar()
         
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -57,29 +58,31 @@ class MainTabBarViewController: RAMAnimatedTabBarController {
         
         let wantedNavigationController = StoryboardScene.Wanted.instantiateWantedNavigationController()
         wantedNavigationController.configureTabBar()
-        wantedNavigationController.tabBarItem.tag = ControllerType.MyBooks.rawValue
+        wantedNavigationController.tabBarItem.tag = ControllerType.Wanted.rawValue
         
         controllers.append(wantedNavigationController)
         
         let swapNavigationController = StoryboardScene.Swap.instantiateSwapNavigationController()
         swapNavigationController.configureTabBar()
-        swapNavigationController.tabBarItem.tag = ControllerType.MyBooks.rawValue
+        swapNavigationController.tabBarItem.tag = ControllerType.Swap.rawValue
         
         controllers.append(swapNavigationController)
         
         let matchNavigationController = StoryboardScene.Match.instantiateMatchNavigationController()
         matchNavigationController.configureTabBar()
-        matchNavigationController.tabBarItem.tag = ControllerType.MyBooks.rawValue
+        matchNavigationController.tabBarItem.tag = ControllerType.Match.rawValue
         
         controllers.append(matchNavigationController)
         
         let profileNavigationController = StoryboardScene.Profile.instantiateProfileNavigationController()
         profileNavigationController.configureTabBar()
-        profileNavigationController.tabBarItem.tag = ControllerType.MyBooks.rawValue
+        profileNavigationController.tabBarItem.tag = ControllerType.Profile.rawValue
         
         controllers.append(profileNavigationController)
         
         viewControllers = controllers
+        
+        selectedIndex = 2
     }
 }
 

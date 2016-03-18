@@ -14,7 +14,7 @@ private let numberOfCards: UInt = 4
 private let frameAnimationSpringBounciness:CGFloat = 9
 private let frameAnimationSpringSpeed:CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
-private let kolodaAlphaValueSemiTransparent:CGFloat = 0.1
+private let kolodaAlphaValueSemiTransparent:CGFloat = 0.05
 
 class SwapViewController: BSViewController {
 
@@ -33,18 +33,14 @@ class SwapViewController: BSViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func skipButtonAction(sender: AnyObject) {
+        bookKolodaView?.swipe(SwipeResultDirection.Left)
+        
     }
-    */
-
+    @IBAction func likeButtonAction(sender: AnyObject) {
+        bookKolodaView?.swipe(SwipeResultDirection.Right)
+    }
 }
 
 //MARK: KolodaViewDelegate
