@@ -97,7 +97,7 @@ class BookViewModel {
     }
     
     func offeredBooks(completion: (error: NSError?) -> Void) {
-        NetworkHelper.authorizedRequest(.GET, endpoint: offerEndpoint, parameters: nil) { (response) -> Void in
+        NetworkHelper.authorizedRequest(.GET, endpoint: offeredEndpoint, parameters: nil) { (response) -> Void in
             if response.result.error != nil {
                 completion(error: response.result.error)
             } else {
