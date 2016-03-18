@@ -13,7 +13,11 @@ struct BookModel: Decodable {
     var url: String?
     var title: String?
     var author: String?
-    var cover: String?
+    var cover: NSURL {
+        get {
+            return NSURL(string: "http://ext2.lubimyczytac.pl/book/\(bookId!)/image?request={%22width%22:%22500%22,%22height%22:%22500%22}")!
+        }
+    }
     var rating: Float?
     
     init?(json: JSON) {
@@ -21,7 +25,6 @@ struct BookModel: Decodable {
         url = "url" <~~ json
         title = "title" <~~ json
         author = "author" <~~ json
-        cover = "cover" <~~ json
         rating = "rating" <~~ json
     }
 }

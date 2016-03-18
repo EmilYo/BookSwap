@@ -21,11 +21,27 @@ extension UIColor {
     /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9013fe"></span>
     /// Alpha: 100% <br/> (0x9013feff)
     case Second
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#566d8c"></span>
+    /// Alpha: 100% <br/> (0x566d8cff)
+    case TabBarIcon
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f26457"></span>
+    /// Alpha: 100% <br/> (0xf26457ff)
+    case TabBarSelectedIcon
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f26457"></span>
+    /// Alpha: 100% <br/> (0xf26457ff)
+    case TabBarSelectedText
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#566d8c"></span>
+    /// Alpha: 100% <br/> (0x566d8cff)
+    case TabBarText
 
     var rgbaValue: UInt32! {
       switch self {
       case .First: return 0xf5a623ff
       case .Second: return 0x9013feff
+      case .TabBarIcon: return 0x566d8cff
+      case .TabBarSelectedIcon: return 0xf26457ff
+      case .TabBarSelectedText: return 0xf26457ff
+      case .TabBarText: return 0x566d8cff
       }
     }
 

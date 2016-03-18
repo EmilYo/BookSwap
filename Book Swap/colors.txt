@@ -1,2 +1,6 @@
 First   : 0xF5A623
 Second  : 0x9013FE
+TabBarSelectedIcon      :0xF26457
+TabBarSelectedText      :0xF26457
+TabBarIcon              :0x566D8C
+TabBarText              :0x566D8C
