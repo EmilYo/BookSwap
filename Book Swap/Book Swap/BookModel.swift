@@ -12,7 +12,7 @@ struct BookModel: Decodable {
     var bookId: Int?
     var url: String?
     var title: String?
-    var authors: [AuthorModel]?
+    var author: String?
     var cover: String?
     var rating: Float?
     
@@ -20,7 +20,7 @@ struct BookModel: Decodable {
         bookId = "id" <~~ json
         url = "url" <~~ json
         title = "title" <~~ json
-        authors = "authors" <~~ json
+        author = "author" <~~ json
         cover = "cover" <~~ json
         rating = "rating" <~~ json
     }

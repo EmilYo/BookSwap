@@ -15,7 +15,7 @@ class BookViewModel {
     private let wantEndpoint = "/books/want/"
     private let nearbyEndpoint = "/books/nearby"
     
-    var books = [BookModel]()
+    var books: [BookModel]?
     
     var selectedBook: BookModel?
     
