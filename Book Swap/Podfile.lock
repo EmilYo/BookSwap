@@ -9,6 +9,9 @@ PODS:
     - Bolts (~> 1.5)
   - FBSDKLoginKit (4.10.1):
     - FBSDKCoreKit
+  - Koloda (2.0.10):
+    - pop (~> 1.0)
+  - pop (1.0.9)
   - PromiseKit/CorePromise (3.0.3)
   - RAMAnimatedTabBarController (1.2.2)
   - SnapKit (0.19.1)
@@ -16,6 +19,7 @@ PODS:
 DEPENDENCIES:
   - FBSDKCoreKit (~> 4.9)
   - FBSDKLoginKit (~> 4.9)
+  - Koloda (~> 2.0)
   - PromiseKit/CorePromise (~> 3.0)
   - RAMAnimatedTabBarController (~> 1.2.2)
   - SnapKit (~> 0.16)
@@ -24,6 +28,8 @@ SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
+  Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PromiseKit: 00ec2a219bf5ad2833f95977698e921932b8dfd3
   RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
