@@ -84,18 +84,28 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/Async.framework"
   install_framework "Pods/Bolts.framework"
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
+  install_framework "Pods/Gloss.framework"
   install_framework "Pods/PromiseKit.framework"
   install_framework "Pods/RAMAnimatedTabBarController.framework"
   install_framework "Pods/SnapKit.framework"
+  install_framework "Pods/Timberjack.framework"
+  install_framework "Pods/Timepiece.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/Async.framework"
   install_framework "Pods/Bolts.framework"
   install_framework "Pods/FBSDKCoreKit.framework"
   install_framework "Pods/FBSDKLoginKit.framework"
+  install_framework "Pods/Gloss.framework"
   install_framework "Pods/PromiseKit.framework"
   install_framework "Pods/RAMAnimatedTabBarController.framework"
   install_framework "Pods/SnapKit.framework"
+  install_framework "Pods/Timberjack.framework"
+  install_framework "Pods/Timepiece.framework"
 fi

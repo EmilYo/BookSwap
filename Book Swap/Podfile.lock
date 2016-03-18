@@ -1,4 +1,6 @@
 PODS:
+  - Alamofire (3.2.1)
+  - AsyncSwift (1.7.2)
   - Bolts (1.6.0):
     - Bolts/AppLinks (= 1.6.0)
     - Bolts/Tasks (= 1.6.0)
@@ -9,23 +11,36 @@ PODS:
     - Bolts (~> 1.5)
   - FBSDKLoginKit (4.10.1):
     - FBSDKCoreKit
+  - Gloss (0.7.1)
   - PromiseKit/CorePromise (3.0.3)
   - RAMAnimatedTabBarController (1.2.2)
   - SnapKit (0.19.1)
+  - Timberjack (0.0.2)
+  - Timepiece (0.4.2)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.1)
+  - AsyncSwift (~> 1.6)
   - FBSDKCoreKit (~> 4.9)
   - FBSDKLoginKit (~> 4.9)
+  - Gloss (~> 0.7)
   - PromiseKit/CorePromise (~> 3.0)
   - RAMAnimatedTabBarController (~> 1.2.2)
   - SnapKit (~> 0.16)
+  - Timberjack (~> 0.0)
+  - Timepiece (~> 0.4)
 
 SPEC CHECKSUMS:
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
+  AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   FBSDKCoreKit: d2aaed5e9ab7d8d6301c533376a1fbff1cf3deb5
   FBSDKLoginKit: 699ff169080e3072de4b9b0faca90bf23dc36deb
+  Gloss: e674d7aa06a7e292a591d0d39a759b826daf503e
   PromiseKit: 00ec2a219bf5ad2833f95977698e921932b8dfd3
   RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
+  Timberjack: 4181fb4fa5c0c02a0855deb5aa1ade6043db7b42
+  Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
 
 COCOAPODS: 0.39.0

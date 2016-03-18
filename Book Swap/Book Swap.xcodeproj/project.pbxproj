@@ -11,6 +11,13 @@
 		8E12B2E71C9C77A700CD574F /* ImagesGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12B2E31C9C77A700CD574F /* ImagesGen.swift */; };
 		8E12B2E81C9C77A700CD574F /* StoryboardsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12B2E41C9C77A700CD574F /* StoryboardsGen.swift */; };
 		8E12B2E91C9C77A700CD574F /* StringsGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E12B2E51C9C77A700CD574F /* StringsGen.swift */; };
+		8E31670E1C9C7A35001A20E6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31670D1C9C7A35001A20E6 /* LoginViewController.swift */; };
+		8E3167101C9C7A60001A20E6 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31670F1C9C7A60001A20E6 /* LoginNavigationController.swift */; };
+		8E3167121C9C7A6E001A20E6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3167111C9C7A6E001A20E6 /* Login.storyboard */; };
+		8E3167141C9C7B78001A20E6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167131C9C7B78001A20E6 /* UserModel.swift */; };
+		8E3167161C9C7B89001A20E6 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167151C9C7B89001A20E6 /* UserViewModel.swift */; };
+		8E3167191C9C7C29001A20E6 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167181C9C7C29001A20E6 /* NetworkHelper.swift */; };
+		8E31671B1C9C7D21001A20E6 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31671A1C9C7D21001A20E6 /* Constans.swift */; };
 		8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */; };
 		8EECF4421C9C6A3F00D93C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4401C9C6A3F00D93C62 /* Main.storyboard */; };
 		8EECF4441C9C6A3F00D93C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4431C9C6A3F00D93C62 /* Assets.xcassets */; };
@@ -44,6 +51,13 @@
 		8E12B2E31C9C77A700CD574F /* ImagesGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesGen.swift; sourceTree = "<group>"; };
 		8E12B2E41C9C77A700CD574F /* StoryboardsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardsGen.swift; sourceTree = "<group>"; };
 		8E12B2E51C9C77A700CD574F /* StringsGen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringsGen.swift; sourceTree = "<group>"; };
+		8E31670D1C9C7A35001A20E6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8E31670F1C9C7A60001A20E6 /* LoginNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginNavigationController.swift; sourceTree = "<group>"; };
+		8E3167111C9C7A6E001A20E6 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		8E3167131C9C7B78001A20E6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8E3167151C9C7B89001A20E6 /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		8E3167181C9C7C29001A20E6 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		8E31671A1C9C7D21001A20E6 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		8EECF4391C9C6A3E00D93C62 /* Book Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Swap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EECF4411C9C6A3F00D93C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,6 +116,7 @@
 		8E12B2DE1C9C701F00CD574F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E3167131C9C7B78001A20E6 /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -109,6 +124,7 @@
 		8E12B2DF1C9C702600CD574F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8E3167151C9C7B89001A20E6 /* UserViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -125,6 +141,7 @@
 				E25DE69D1C9C743A00EEDCD4 /* Swap */,
 				E25DE6A71C9C74DD00EEDCD4 /* Match */,
 				E25DE6AE1C9C754000EEDCD4 /* Profile */,
+				8E31670C1C9C7A06001A20E6 /* Login */,
 			);
 			name = "View and Cantrollers";
 			sourceTree = "<group>";
@@ -141,6 +158,24 @@
 				8EECF4481C9C6A3F00D93C62 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		8E31670C1C9C7A06001A20E6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8E3167111C9C7A6E001A20E6 /* Login.storyboard */,
+				8E31670F1C9C7A60001A20E6 /* LoginNavigationController.swift */,
+				8E31670D1C9C7A35001A20E6 /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		8E3167171C9C7C13001A20E6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8E3167181C9C7C29001A20E6 /* NetworkHelper.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		8EECF4301C9C6A3E00D93C62 = {
@@ -164,10 +199,12 @@
 		8EECF43B1C9C6A3E00D93C62 /* Book Swap */ = {
 			isa = PBXGroup;
 			children = (
+				8E31671A1C9C7D21001A20E6 /* Constans.swift */,
 				8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */,
 				8E12B2E01C9C706900CD574F /* View and Cantrollers */,
 				8E12B2DF1C9C702600CD574F /* ViewModel */,
 				8E12B2DE1C9C701F00CD574F /* Model */,
+				8E3167171C9C7C13001A20E6 /* Helpers */,
 				8E12B2E11C9C70AB00CD574F /* Resources */,
 			);
 			path = "Book Swap";
@@ -258,6 +295,7 @@
 				TargetAttributes = {
 					8EECF4381C9C6A3E00D93C62 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = E2DCV8W7B9;
 					};
 				};
 			};
@@ -292,6 +330,7 @@
 				8EECF4441C9C6A3F00D93C62 /* Assets.xcassets in Resources */,
 				8EECF4421C9C6A3F00D93C62 /* Main.storyboard in Resources */,
 				E25DE6A11C9C748700EEDCD4 /* Swap.storyboard in Resources */,
+				8E3167121C9C7A6E001A20E6 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,15 +390,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E25DE6AB1C9C752300EEDCD4 /* MatchViewController.swift in Sources */,
+				8E3167161C9C7B89001A20E6 /* UserViewModel.swift in Sources */,
+				8E31671B1C9C7D21001A20E6 /* Constans.swift in Sources */,
+				8E3167141C9C7B78001A20E6 /* UserModel.swift in Sources */,
 				E25DE6B41C9C756A00EEDCD4 /* ProfileNavigationController.swift in Sources */,
 				8E12B2E61C9C77A700CD574F /* ColorsGen.swift in Sources */,
+				8E3167191C9C7C29001A20E6 /* NetworkHelper.swift in Sources */,
 				E25DE68F1C9C730500EEDCD4 /* BSViewController.swift in Sources */,
+				8E31670E1C9C7A35001A20E6 /* LoginViewController.swift in Sources */,
 				E25DE6A31C9C749400EEDCD4 /* SwapViewController.swift in Sources */,
 				E25DE68D1C9C72F600EEDCD4 /* BSNavigationController.swift in Sources */,
 				E25DE6981C9C73B100EEDCD4 /* WantedNavigationController.swift in Sources */,
 				E25DE68A1C9C718400EEDCD4 /* MainTabBarViewController.swift in Sources */,
 				8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */,
 				E25DE6A51C9C74A600EEDCD4 /* SwapNavigationController.swift in Sources */,
+				8E3167101C9C7A60001A20E6 /* LoginNavigationController.swift in Sources */,
 				8E12B2E71C9C77A700CD574F /* ImagesGen.swift in Sources */,
 				8E12B2E91C9C77A700CD574F /* StringsGen.swift in Sources */,
 				E25DE6931C9C734C00EEDCD4 /* MyBooksNavigationController.swift in Sources */,
@@ -479,11 +524,12 @@
 			baseConfigurationReference = 4268AC4CAAEAF45DC45AD420 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Book Swap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bookswap.Book-Swap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25c0a7ae-d83f-43f2-84a5-6a69eb7d8b95";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -492,6 +538,7 @@
 			baseConfigurationReference = 47FBB4FDF9DED4F49251A6B9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Book Swap/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bookswap.Book-Swap";
