@@ -25,6 +25,8 @@ class SwapViewController: BSViewController {
         super.viewDidLoad()
         configureBookKolodaView()
         
+        navigationItem.title = L10n.LocTabSwap.string
+        
         bookViewModel.nearbyBooks { (error) -> Void in
             if error != nil {
                 
@@ -101,6 +103,7 @@ extension SwapViewController: KolodaViewDataSource {
             bookTinderTabView?.titleLabel.text = book.title
             bookTinderTabView?.authorLabel.text = book.author
         }
+        bookTinderTabView?.layer.cornerRadius = 5
         
         return bookTinderTabView!
     }

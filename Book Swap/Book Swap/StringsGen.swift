@@ -5,6 +5,16 @@ import Foundation
 enum L10n {
   /// Login
   case LocLoginTitle
+  /// My Books
+  case LocTabMyBooks
+  /// Wanted
+  case LocTabWanted
+  /// Swap
+  case LocTabSwap
+  /// Match
+  case LocTabMatch
+  /// Profile
+  case LocTabProfile
 }
 
 extension L10n: CustomStringConvertible {
@@ -14,6 +24,16 @@ extension L10n: CustomStringConvertible {
     switch self {
       case .LocLoginTitle:
         return L10n.tr("loc_login_title")
+      case .LocTabMyBooks:
+        return L10n.tr("loc_tab_my_books")
+      case .LocTabWanted:
+        return L10n.tr("loc_tab_wanted")
+      case .LocTabSwap:
+        return L10n.tr("loc_tab_swap")
+      case .LocTabMatch:
+        return L10n.tr("loc_tab_match")
+      case .LocTabProfile:
+        return L10n.tr("loc_tab_profile")
     }
   }
 

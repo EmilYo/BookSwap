@@ -22,6 +22,9 @@ class MyBooksViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = L10n.LocTabMyBooks.string
+        
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")
 
         bookViewModel.offeredBooks { (error) -> Void in

@@ -7,17 +7,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BookTinderTabView" customModule="Book_Swap" customModuleProvider="target">
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="BookTinderTabView" customModule="Book_Swap" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNP-Kj-aHe">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNP-Kj-aHe">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDH-55-8N7">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDH-55-8N7">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-D3-Aam">
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-D3-Aam">
                             <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPO-XY-cYr">
@@ -33,7 +33,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="gnW-CH-YJo" firstAttribute="trailing" secondItem="QPO-XY-cYr" secondAttribute="trailing" id="Ono-Rm-wsH"/>
                                 <constraint firstItem="gnW-CH-YJo" firstAttribute="leading" secondItem="QPO-XY-cYr" secondAttribute="leading" id="Ute-Hz-kgq"/>
@@ -45,7 +45,7 @@
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="vRn-D3-Aam" firstAttribute="leading" secondItem="SNP-Kj-aHe" secondAttribute="leading" id="8tH-jF-oOU"/>
                         <constraint firstAttribute="trailing" secondItem="vRn-D3-Aam" secondAttribute="trailing" id="Gca-Nc-nQm"/>
@@ -57,7 +57,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="SNP-Kj-aHe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0Rh-bR-wIS"/>
                 <constraint firstAttribute="bottom" secondItem="SNP-Kj-aHe" secondAttribute="bottom" id="9A6-2D-jVw"/>
@@ -68,6 +68,7 @@
             <connections>
                 <outlet property="authorLabel" destination="gnW-CH-YJo" id="G8H-gJ-aVB"/>
                 <outlet property="bookImageView" destination="jDH-55-8N7" id="fTB-fa-svj"/>
+                <outlet property="containerView" destination="SNP-Kj-aHe" id="g5f-GO-fRH"/>
                 <outlet property="titleLabel" destination="QPO-XY-cYr" id="kmD-fC-a6Z"/>
             </connections>
             <point key="canvasLocation" x="90.5" y="155.5"/>

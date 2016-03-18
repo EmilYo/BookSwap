@@ -13,6 +13,7 @@ class WantedViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = L10n.LocTabWanted.string
         // Do any additional setup after loading the view.
     }
 
