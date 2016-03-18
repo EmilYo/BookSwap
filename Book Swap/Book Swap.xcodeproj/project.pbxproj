@@ -47,6 +47,11 @@
 		E25DE6B01C9C755100EEDCD4 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E25DE6AF1C9C755100EEDCD4 /* Profile.storyboard */; };
 		E25DE6B21C9C755C00EEDCD4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6B11C9C755C00EEDCD4 /* ProfileViewController.swift */; };
 		E25DE6B41C9C756A00EEDCD4 /* ProfileNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6B31C9C756A00EEDCD4 /* ProfileNavigationController.swift */; };
+		E25DE6B61C9C854100EEDCD4 /* BookKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6B51C9C854100EEDCD4 /* BookKolodaView.swift */; };
+		E25DE6B91C9C8ABE00EEDCD4 /* BookOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6B81C9C8ABE00EEDCD4 /* BookOverlayView.swift */; };
+		E25DE6BB1C9C8AE300EEDCD4 /* BookOverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25DE6BA1C9C8AE300EEDCD4 /* BookOverlayView.xib */; };
+		E25DE6BE1C9C8E6700EEDCD4 /* BookTinderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6BD1C9C8E6700EEDCD4 /* BookTinderTabView.swift */; };
+		E25DE6C01C9C8E7700EEDCD4 /* BookTinderTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +99,11 @@
 		E25DE6AF1C9C755100EEDCD4 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		E25DE6B11C9C755C00EEDCD4 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E25DE6B31C9C756A00EEDCD4 /* ProfileNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileNavigationController.swift; sourceTree = "<group>"; };
+		E25DE6B51C9C854100EEDCD4 /* BookKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookKolodaView.swift; sourceTree = "<group>"; };
+		E25DE6B81C9C8ABE00EEDCD4 /* BookOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookOverlayView.swift; sourceTree = "<group>"; };
+		E25DE6BA1C9C8AE300EEDCD4 /* BookOverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookOverlayView.xib; sourceTree = "<group>"; };
+		E25DE6BD1C9C8E6700EEDCD4 /* BookTinderTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTinderTabView.swift; sourceTree = "<group>"; };
+		E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTinderTabView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +264,7 @@
 				E25DE6A41C9C74A600EEDCD4 /* SwapNavigationController.swift */,
 				E25DE6A21C9C749400EEDCD4 /* SwapViewController.swift */,
 				E25DE6A01C9C748700EEDCD4 /* Swap.storyboard */,
+				E25DE6B71C9C8A9300EEDCD4 /* Koloda */,
 			);
 			name = Swap;
 			sourceTree = "<group>";
@@ -276,6 +287,26 @@
 				E25DE6AF1C9C755100EEDCD4 /* Profile.storyboard */,
 			);
 			name = Profile;
+			sourceTree = "<group>";
+		};
+		E25DE6B71C9C8A9300EEDCD4 /* Koloda */ = {
+			isa = PBXGroup;
+			children = (
+				E25DE6BC1C9C8E5100EEDCD4 /* CustomTab */,
+				E25DE6B51C9C854100EEDCD4 /* BookKolodaView.swift */,
+				E25DE6B81C9C8ABE00EEDCD4 /* BookOverlayView.swift */,
+				E25DE6BA1C9C8AE300EEDCD4 /* BookOverlayView.xib */,
+			);
+			name = Koloda;
+			sourceTree = "<group>";
+		};
+		E25DE6BC1C9C8E5100EEDCD4 /* CustomTab */ = {
+			isa = PBXGroup;
+			children = (
+				E25DE6BD1C9C8E6700EEDCD4 /* BookTinderTabView.swift */,
+				E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */,
+			);
+			name = CustomTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +374,9 @@
 				8EECF4471C9C6A3F00D93C62 /* LaunchScreen.storyboard in Resources */,
 				E25DE69C1C9C73CC00EEDCD4 /* Wanted.storyboard in Resources */,
 				E25DE6B01C9C755100EEDCD4 /* Profile.storyboard in Resources */,
+				E25DE6C01C9C8E7700EEDCD4 /* BookTinderTabView.xib in Resources */,
 				E25DE6AD1C9C752A00EEDCD4 /* Match.storyboard in Resources */,
+				E25DE6BB1C9C8AE300EEDCD4 /* BookOverlayView.xib in Resources */,
 				E25DE6951C9C735900EEDCD4 /* MyBooks.storyboard in Resources */,
 				8E31671E1C9C83A6001A20E6 /* Localizable.strings in Resources */,
 				8EECF4441C9C6A3F00D93C62 /* Assets.xcassets in Resources */,
@@ -414,6 +447,7 @@
 				8E3167241C9C96A1001A20E6 /* AuthorModel.swift in Sources */,
 				8E31671B1C9C7D21001A20E6 /* Constans.swift in Sources */,
 				8E3167141C9C7B78001A20E6 /* UserModel.swift in Sources */,
+				E25DE6B91C9C8ABE00EEDCD4 /* BookOverlayView.swift in Sources */,
 				E25DE6B41C9C756A00EEDCD4 /* ProfileNavigationController.swift in Sources */,
 				8E3167221C9C9568001A20E6 /* BookModel.swift in Sources */,
 				8E12B2E61C9C77A700CD574F /* ColorsGen.swift in Sources */,
@@ -424,6 +458,7 @@
 				E25DE68D1C9C72F600EEDCD4 /* BSNavigationController.swift in Sources */,
 				E25DE6981C9C73B100EEDCD4 /* WantedNavigationController.swift in Sources */,
 				8E3167261C9C972F001A20E6 /* BookViewModel.swift in Sources */,
+				E25DE6BE1C9C8E6700EEDCD4 /* BookTinderTabView.swift in Sources */,
 				E25DE68A1C9C718400EEDCD4 /* MainTabBarViewController.swift in Sources */,
 				8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */,
 				E25DE6A51C9C74A600EEDCD4 /* SwapNavigationController.swift in Sources */,
@@ -435,6 +470,7 @@
 				E25DE6911C9C732C00EEDCD4 /* MyBooksViewController.swift in Sources */,
 				E25DE6B21C9C755C00EEDCD4 /* ProfileViewController.swift in Sources */,
 				E25DE6A91C9C751700EEDCD4 /* MatchNavigationController.swift in Sources */,
+				E25DE6B61C9C854100EEDCD4 /* BookKolodaView.swift in Sources */,
 				E25DE69A1C9C73C100EEDCD4 /* WantedViewController.swift in Sources */,
 				8E12B2E81C9C77A700CD574F /* StoryboardsGen.swift in Sources */,
 			);

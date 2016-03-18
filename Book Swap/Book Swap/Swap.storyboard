@@ -16,9 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="SoL-Ie-yJb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnG-Oq-CRy" customClass="BookKolodaView" customModule="Book_Swap" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dnG-Oq-CRy" firstAttribute="leading" secondItem="SoL-Ie-yJb" secondAttribute="leading" id="DWN-Cd-GIf"/>
+                            <constraint firstAttribute="trailing" secondItem="dnG-Oq-CRy" secondAttribute="trailing" id="Z3x-cC-s6Z"/>
+                            <constraint firstItem="dnG-Oq-CRy" firstAttribute="top" secondItem="QLZ-aJ-bbj" secondAttribute="bottom" id="j3Q-31-JDF"/>
+                            <constraint firstItem="Xtp-yf-Uxz" firstAttribute="top" secondItem="dnG-Oq-CRy" secondAttribute="bottom" id="l8U-PB-Qu2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WkY-MH-vGd"/>
+                    <connections>
+                        <outlet property="bookKolodaView" destination="dnG-Oq-CRy" id="R4q-Tm-UsZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGl-Zc-xzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

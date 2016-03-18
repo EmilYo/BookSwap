@@ -10,9 +10,9 @@ import UIKit
 
 class MatchViewController: BSViewController {
 
+    @IBOutlet weak var bookKolodaView: BookKolodaView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -33,3 +33,4 @@ class MatchViewController: BSViewController {
     */
 
 }
+
