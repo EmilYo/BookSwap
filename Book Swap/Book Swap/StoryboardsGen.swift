@@ -38,6 +38,14 @@ struct StoryboardScene {
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
   }
+  enum Login: String, StoryboardSceneType {
+    static let storyboardName = "Login"
+
+    case LoginNavigationControllerScene = "LoginNavigationController"
+    static func instantiateLoginNavigationController() -> LoginNavigationController {
+      return StoryboardScene.Login.LoginNavigationControllerScene.viewController() as! LoginNavigationController
+    }
+  }
   enum Main: StoryboardSceneType {
     static let storyboardName = "Main"
   }
