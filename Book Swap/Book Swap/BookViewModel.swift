@@ -14,6 +14,8 @@ class BookViewModel {
     private let offerEndpoint = "/books/offer/"
     private let wantEndpoint = "/books/want/"
     private let nearbyEndpoint = "/books/nearby"
+    private let wantedEndpoint = "/books/wanted"
+    private let offeredEndpoint = "/books/offered"
     
     var books = [BookModel]()
     
@@ -66,6 +68,36 @@ class BookViewModel {
     
     func nearbyBooks(completion: (error: NSError?) -> Void) {
         NetworkHelper.authorizedRequest(.GET, endpoint: nearbyEndpoint, parameters: nil) { (response) -> Void in
+            if response.result.error != nil {
+                completion(error: response.result.error)
+            } else {
+                if let json = response.result.value as? [JSON] {
+                    self.books = [BookModel].fromJSONArray(json)
+                    completion(error: nil)
+                } else {
+                    completion(error: ErrorHelper.error)
+                }
+            }
+        }
+    }
+    
+    func wantedBooks(completion: (error: NSError?) -> Void) {
+        NetworkHelper.authorizedRequest(.GET, endpoint: wantedEndpoint, parameters: nil) { (response) -> Void in
+            if response.result.error != nil {
+                completion(error: response.result.error)
+            } else {
+                if let json = response.result.value as? [JSON] {
+                    self.books = [BookModel].fromJSONArray(json)
+                    completion(error: nil)
+                } else {
+                    completion(error: ErrorHelper.error)
+                }
+            }
+        }
+    }
+    
+    func offeredBooks(completion: (error: NSError?) -> Void) {
+        NetworkHelper.authorizedRequest(.GET, endpoint: offerEndpoint, parameters: nil) { (response) -> Void in
             if response.result.error != nil {
                 completion(error: response.result.error)
             } else {
