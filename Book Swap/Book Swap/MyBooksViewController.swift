@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Haneke
 
 class MyBooksViewController: BSViewController {
 
@@ -23,6 +24,9 @@ class MyBooksViewController: BSViewController {
         
         navigationItem.title = L10n.LocTabMyBooks.string
         
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")
+
         bookViewModel.offeredBooks { (error) -> Void in
             if error != nil {
                 //TODO: Handle error
@@ -37,7 +41,10 @@ class MyBooksViewController: BSViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func addNewBook(sender: UIBarButtonItem) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -61,6 +68,11 @@ extension MyBooksViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(BookCollectionViewCell.identifier, forIndexPath: indexPath) as? BookCollectionViewCell
         let book = bookViewModel.books?[indexPath.row]
+        cell?.imageView.hnk_cancelSetImage()
+        cell?.imageView.hnk_setImageFromURL(book!.cover)
+        cell?.titleLabel.text = book?.title
+        cell?.authorLabel.text = book?.author
+        
         return cell!
     }
 }

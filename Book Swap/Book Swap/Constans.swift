@@ -15,5 +15,6 @@ struct Constans {
     
     enum DefualtKey: String {
         case UserToken = "UserToken"
+        case ApnToken = "ApnToken"
     }
 }

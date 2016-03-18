@@ -10,8 +10,15 @@ import Foundation
 import Gloss
 
 struct UserModel: Decodable {
+    var userId: String?
+    var firstName: String?
+    var lastName: String?
+    var avatar: String?
     
     init?(json: JSON) {
-        
+        userId = "id" <~~ json
+        firstName = "first_name" <~~ json
+        lastName = "last_name" <~~ json
+        avatar = "avatar" <~~ json
     }
 }

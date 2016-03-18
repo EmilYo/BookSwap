@@ -318,9 +318,9 @@
 		E25DE6AE1C9C754000EEDCD4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E25DE6AF1C9C755100EEDCD4 /* Profile.storyboard */,
 				E25DE6B31C9C756A00EEDCD4 /* ProfileNavigationController.swift */,
 				E25DE6B11C9C755C00EEDCD4 /* ProfileViewController.swift */,
-				E25DE6AF1C9C755100EEDCD4 /* Profile.storyboard */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
