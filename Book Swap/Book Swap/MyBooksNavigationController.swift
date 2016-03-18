@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
 class MyBooksNavigationController: BSNavigationController {
 
@@ -21,6 +22,19 @@ class MyBooksNavigationController: BSNavigationController {
         // Dispose of any resources that can be recreated.
     }
     
+    func configureTabBar() {
+        let tabAnimation = RAMBounceAnimation()
+//        tabAnimation.textSelectedColor = UIColor(named: .TabBarSelectedText)
+//        tabAnimation.iconSelectedColor = UIColor(named: .MainAction)
+        
+//        let tabBarItem = RAMAnimatedTabBarItem(title: L10n.LocTabCruises.string, image: UIImage.Asset.TabCruise.image, selectedImage: nil)
+//        tabBarItem.textColor = UIColor(named: .TabBarUnselectedText)
+//        tabBarItem.iconColor = UIColor(named: .TabBarUnselectedIcon)
+//        tabBarItem.animation = tabAnimation
+        
+        self.tabBarItem = tabBarItem
+
+    }
 
     /*
     // MARK: - Navigation

@@ -27,7 +27,11 @@ class MainTabBarViewController: RAMAnimatedTabBarController {
         delegate = self
         var controllers = [UIViewController]()
         
-        
+//        let myBooksNavigationController = StoryboardScene.Cruises.instanciateCruisesNavigationController()
+//        myBooksNavigationController.configureTabBar()
+//        myBooksNavigationController.tabBarItem.tag = ControllerType.Cruises.rawValue
+//        
+//        controllers.append(myBooksNavigationController)
         
 
     }
