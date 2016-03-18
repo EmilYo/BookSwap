@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lfl-KD-pe0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Swap View Controller-->
+        <scene sceneID="sud-pi-5iB">
+            <objects>
+                <viewController id="Bii-EA-7yv" customClass="SwapViewController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLZ-aJ-bbj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xtp-yf-Uxz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SoL-Ie-yJb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WkY-MH-vGd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGl-Zc-xzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="361"/>
+        </scene>
+        <!--Swap Navigation Controller-->
+        <scene sceneID="M8a-th-Sti">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfl-KD-pe0" customClass="SwapNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8da-04-hBo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Bii-EA-7yv" kind="relationship" relationship="rootViewController" id="CYJ-2n-RSg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqx-PU-NDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="316" y="361"/>
+        </scene>
+    </scenes>
+</document>
