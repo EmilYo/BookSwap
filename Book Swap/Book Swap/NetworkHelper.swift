@@ -27,7 +27,10 @@ class NetworkHelper {
     
     static func authorizedRequest(method: Alamofire.Method, endpoint: String, parameters: [String: AnyObject]?, encoding: ParameterEncoding = ParameterEncoding.JSON, completionHandler: (response: Alamofire.Response<AnyObject, NSError>) -> Void) {
         
-        guard let token = NSUserDefaults.standardUserDefaults().stringForKey(Constans.DefualtKey.UserToken.rawValue) else { return }
+        guard let token = NSUserDefaults.standardUserDefaults().stringForKey(Constans.DefualtKey.UserToken.rawValue) else {
+            //TODO: when there is no token we should return something. ;P
+            return
+        }
         
         showNetworkActivityIndicator()
         

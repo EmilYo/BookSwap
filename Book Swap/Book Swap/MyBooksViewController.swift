@@ -10,10 +10,24 @@ import UIKit
 
 class MyBooksViewController: BSViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.registerNib(UINib(nibName: BookCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
+        }
+    }
+    
+    private var bookViewModel = BookViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        bookViewModel.offeredBooks { (error) -> Void in
+            if error != nil {
+                //TODO: Handle error
+            } else {
+                self.collectionView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,4 +46,35 @@ class MyBooksViewController: BSViewController {
     }
     */
 
+}
+
+extension MyBooksViewController: UICollectionViewDataSource {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return bookViewModel.books.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(BookCollectionViewCell.identifier, forIndexPath: indexPath) as? BookCollectionViewCell
+        let book = bookViewModel.books[indexPath.row]
+        return cell!
+    }
+}
+
+extension MyBooksViewController: UICollectionViewDelegate {
+    
+}
+
+extension MyBooksViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width = collectionView.frame.width / 2
+        return CGSize(width: width, height: width / 3 * 4)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
 }
