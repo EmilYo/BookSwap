@@ -24,12 +24,12 @@ class MatchNavigationController: BSNavigationController {
     
     func configureTabBar() {
         let tabAnimation = RAMBounceAnimation()
-        tabAnimation.textSelectedColor = UIColor.redColor()
-        tabAnimation.iconSelectedColor = UIColor.redColor()
+        tabAnimation.textSelectedColor = UIColor(named: .Second)
+        tabAnimation.iconSelectedColor = UIColor(named: .Second)
         
         let tabBarItem = RAMAnimatedTabBarItem(title: "Match", image: UIImage.Asset.TabMatch.image, selectedImage: nil)
-        tabBarItem.textColor = UIColor.blackColor()
-        tabBarItem.iconColor = UIColor.blackColor()
+        tabBarItem.textColor = UIColor.whiteColor()
+        tabBarItem.iconColor = UIColor.whiteColor()
         tabBarItem.animation = tabAnimation
         
         self.tabBarItem = tabBarItem

@@ -17,7 +17,7 @@ class BookViewModel {
     private let wantedEndpoint = "/books/wanted"
     private let offeredEndpoint = "/books/offered"
     
-    var books = [BookModel]()
+    var books: [BookModel]?
     
     var selectedBook: BookModel?
     

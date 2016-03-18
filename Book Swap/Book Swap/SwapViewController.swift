@@ -19,19 +19,26 @@ private let kolodaAlphaValueSemiTransparent:CGFloat = 0.05
 class SwapViewController: BSViewController {
 
     @IBOutlet weak var bookKolodaView: BookKolodaView!
+    private var bookViewModel =  BookViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureBookKolodaView()
+        
+        bookViewModel.nearbyBooks { (error) -> Void in
+            if error != nil {
+                
+            }
+            self.bookKolodaView.reloadData()
+        }
+        
+        // Do any additional setup after loading the view.
+    }
+    func configureBookKolodaView() {
         bookKolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
         bookKolodaView.countOfVisibleCards = kolodaCountOfVisibleCards
         bookKolodaView.delegate = self
         bookKolodaView.dataSource = self
         self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func skipButtonAction(sender: AnyObject) {
@@ -78,12 +85,20 @@ extension SwapViewController: KolodaViewDelegate {
 extension SwapViewController: KolodaViewDataSource {
     
     func koloda(kolodaNumberOfCards koloda:KolodaView) -> UInt {
-        return numberOfCards
+        if let books = bookViewModel.books {
+            return UInt(books.count)
+        }
+        return 0
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         let bookTinderTabView = NSBundle.mainBundle().loadNibNamed("BookTinderTabView", owner: self, options: nil)[0] as? BookTinderTabView
-        bookTinderTabView?.bookImageView.image = UIImage(named: "Book_\(index + 1)")
+        if let book = bookViewModel.books?[Int(index)] {
+            bookTinderTabView?.bookImageView.image = UIImage(named: "Book_\(index + 1)")
+            bookTinderTabView?.titleLabel.text = book.title
+            bookTinderTabView?.authorLabel.text = book.author
+        }
+        
         return bookTinderTabView!
     }
     

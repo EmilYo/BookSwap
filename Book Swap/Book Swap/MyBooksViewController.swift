@@ -50,12 +50,15 @@ class MyBooksViewController: BSViewController {
 
 extension MyBooksViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bookViewModel.books.count
+        if let books = bookViewModel.books {
+            return books.count
+        }
+        return 0
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(BookCollectionViewCell.identifier, forIndexPath: indexPath) as? BookCollectionViewCell
-        let book = bookViewModel.books[indexPath.row]
+        let book = bookViewModel.books?[indexPath.row]
         return cell!
     }
 }
