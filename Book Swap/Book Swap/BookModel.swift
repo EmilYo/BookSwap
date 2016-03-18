@@ -12,7 +12,7 @@ struct BookModel: Decodable {
     var bookId: String?
     var url: NSURL {
         get {
-            return NSURL(string: "http://lubimyczytac.pl/ksiazka/295040/\(bookId!)")!
+            return NSURL(string: "http://lubimyczytac.pl/ksiazka/\(bookId!)/")!
         }
     }
     var title: String?

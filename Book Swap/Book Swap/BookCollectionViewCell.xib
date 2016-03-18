@@ -13,7 +13,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="233" height="236"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aKK-ow-l0c">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aKK-ow-l0c">
                         <rect key="frame" x="0.0" y="0.0" width="233" height="236"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sna-bD-nVN" customClass="GradientView" customModule="GradientView">
@@ -58,6 +58,8 @@
             <size key="customSize" width="233" height="236"/>
             <connections>
                 <outlet property="authorLabel" destination="a9r-We-3xk" id="HcF-e2-dfR"/>
+                <outlet property="gradientView" destination="sna-bD-nVN" id="1UE-EI-ID6"/>
+                <outlet property="imageView" destination="aKK-ow-l0c" id="9PL-mO-LAX"/>
                 <outlet property="titleLabel" destination="ify-AK-qbF" id="cOD-fl-6OJ"/>
             </connections>
             <point key="canvasLocation" x="524.5" y="339"/>

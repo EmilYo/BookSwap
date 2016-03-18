@@ -54,7 +54,14 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
             //TODO: Handle error
         } else {
             NSUserDefaults.standardUserDefaults().setObject(result.token.tokenString, forKey: Constans.DefualtKey.UserToken.rawValue)
-            dismissViewControllerAnimated(true, completion: nil)
+            let userViewModel = UserViewModel()
+            userViewModel.loginUser({ (error) -> Void in
+                if error != nil {
+                    //TODO: handle error
+                } else {
+                     self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            })
         }
     }
 }
