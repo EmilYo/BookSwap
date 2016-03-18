@@ -57,6 +57,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E12B2DE1C9C701F00CD574F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8E12B2DF1C9C702600CD574F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		8E12B2E01C9C706900CD574F /* View and Cantrollers */ = {
+			isa = PBXGroup;
+			children = (
+				8EECF4401C9C6A3F00D93C62 /* Main.storyboard */,
+				8EECF43E1C9C6A3E00D93C62 /* ViewController.swift */,
+			);
+			name = "View and Cantrollers";
+			sourceTree = "<group>";
+		};
+		8E12B2E11C9C70AB00CD574F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8EECF4431C9C6A3F00D93C62 /* Assets.xcassets */,
+				8EECF4451C9C6A3F00D93C62 /* LaunchScreen.storyboard */,
+				8EECF4481C9C6A3F00D93C62 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		8EECF4301C9C6A3E00D93C62 = {
 			isa = PBXGroup;
 			children = (
@@ -79,11 +112,10 @@
 			isa = PBXGroup;
 			children = (
 				8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */,
-				8EECF43E1C9C6A3E00D93C62 /* ViewController.swift */,
-				8EECF4401C9C6A3F00D93C62 /* Main.storyboard */,
-				8EECF4431C9C6A3F00D93C62 /* Assets.xcassets */,
-				8EECF4451C9C6A3F00D93C62 /* LaunchScreen.storyboard */,
-				8EECF4481C9C6A3F00D93C62 /* Info.plist */,
+				8E12B2E01C9C706900CD574F /* View and Cantrollers */,
+				8E12B2DF1C9C702600CD574F /* ViewModel */,
+				8E12B2DE1C9C701F00CD574F /* Model */,
+				8E12B2E11C9C70AB00CD574F /* Resources */,
 			);
 			path = "Book Swap";
 			sourceTree = "<group>";
