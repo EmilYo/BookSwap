@@ -7,6 +7,11 @@ pod 'SnapKit', '~> 0.16'
 pod 'PromiseKit/CorePromise', '~> 3.0'
 pod 'FBSDKCoreKit', '~> 4.9'
 pod 'FBSDKLoginKit', '~> 4.9'
+pod 'Gloss', '~> 0.7'
+pod 'AsyncSwift', '~> 1.6'
+pod 'Alamofire', '~> 3.1'
+pod 'Timepiece', '~> 0.4'
+pod 'Timberjack', '~> 0.0'
 
 #UI
 pod 'RAMAnimatedTabBarController', '~> 1.2.2'
