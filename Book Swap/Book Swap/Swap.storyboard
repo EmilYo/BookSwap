@@ -27,7 +27,7 @@
         <!--Swap Navigation Controller-->
         <scene sceneID="M8a-th-Sti">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lfl-KD-pe0" customClass="SwapNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SwapNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Lfl-KD-pe0" customClass="SwapNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8da-04-hBo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

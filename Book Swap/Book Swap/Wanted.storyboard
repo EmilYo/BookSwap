@@ -8,7 +8,7 @@
         <!--Wanted View Controller-->
         <scene sceneID="MV7-sh-QKq">
             <objects>
-                <viewController id="jiN-Gk-Od3" customClass="WantedViewController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WantedViewController" id="jiN-Gk-Od3" customClass="WantedViewController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hSK-Gg-CNk"/>
                         <viewControllerLayoutGuide type="bottom" id="H6d-8Q-pt6"/>
@@ -27,7 +27,7 @@
         <!--Wanted Navigation Controller-->
         <scene sceneID="wMR-hw-GHg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LOE-MX-8k9" customClass="WantedNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WantedNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="LOE-MX-8k9" customClass="WantedNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fci-f2-wtZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

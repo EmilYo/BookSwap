@@ -41,20 +41,55 @@ struct StoryboardScene {
   enum Main: StoryboardSceneType {
     static let storyboardName = "Main"
   }
-  enum Match: StoryboardSceneType {
+  enum Match: String, StoryboardSceneType {
     static let storyboardName = "Match"
+
+    case MatchNavigationControllerScene = "MatchNavigationController"
+    static func instantiateMatchNavigationController() -> MatchNavigationController {
+      return StoryboardScene.Match.MatchNavigationControllerScene.viewController() as! MatchNavigationController
+    }
   }
-  enum MyBooks: StoryboardSceneType {
+  enum MyBooks: String, StoryboardSceneType {
     static let storyboardName = "MyBooks"
+
+    case MyBooksNavigationControllerScene = "MyBooksNavigationController"
+    static func instantiateMyBooksNavigationController() -> MyBooksNavigationController {
+      return StoryboardScene.MyBooks.MyBooksNavigationControllerScene.viewController() as! MyBooksNavigationController
+    }
+
+    case MyBooksViewControllerScene = "MyBooksViewController"
+    static func instantiateMyBooksViewController() -> MyBooksViewController {
+      return StoryboardScene.MyBooks.MyBooksViewControllerScene.viewController() as! MyBooksViewController
+    }
   }
-  enum Profile: StoryboardSceneType {
+  enum Profile: String, StoryboardSceneType {
     static let storyboardName = "Profile"
+
+    case ProfileNavigationControllerScene = "ProfileNavigationController"
+    static func instantiateProfileNavigationController() -> ProfileNavigationController {
+      return StoryboardScene.Profile.ProfileNavigationControllerScene.viewController() as! ProfileNavigationController
+    }
   }
-  enum Swap: StoryboardSceneType {
+  enum Swap: String, StoryboardSceneType {
     static let storyboardName = "Swap"
+
+    case SwapNavigationControllerScene = "SwapNavigationController"
+    static func instantiateSwapNavigationController() -> SwapNavigationController {
+      return StoryboardScene.Swap.SwapNavigationControllerScene.viewController() as! SwapNavigationController
+    }
   }
-  enum Wanted: StoryboardSceneType {
+  enum Wanted: String, StoryboardSceneType {
     static let storyboardName = "Wanted"
+
+    case WantedNavigationControllerScene = "WantedNavigationController"
+    static func instantiateWantedNavigationController() -> WantedNavigationController {
+      return StoryboardScene.Wanted.WantedNavigationControllerScene.viewController() as! WantedNavigationController
+    }
+
+    case WantedViewControllerScene = "WantedViewController"
+    static func instantiateWantedViewController() -> WantedViewController {
+      return StoryboardScene.Wanted.WantedViewControllerScene.viewController() as! WantedViewController
+    }
   }
 }
 

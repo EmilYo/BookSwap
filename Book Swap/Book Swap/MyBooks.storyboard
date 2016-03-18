@@ -8,7 +8,7 @@
         <!--My Books View Controller-->
         <scene sceneID="WXA-zG-96u">
             <objects>
-                <viewController id="xkw-G3-amC" customClass="MyBooksViewController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyBooksViewController" id="xkw-G3-amC" customClass="MyBooksViewController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TNu-8m-YjF"/>
                         <viewControllerLayoutGuide type="bottom" id="JbO-YG-FyJ"/>
@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="1157" y="337"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--My Books Navigation Controller-->
         <scene sceneID="fb9-Lp-2gm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ejs-1f-hd2" customClass="BSNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyBooksNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="ejs-1f-hd2" customClass="MyBooksNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4rM-km-gJw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

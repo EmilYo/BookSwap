@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
 class SwapNavigationController: BSNavigationController {
 
@@ -21,7 +22,18 @@ class SwapNavigationController: BSNavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func configureTabBar() {
+        let tabAnimation = RAMBounceAnimation()
+        tabAnimation.textSelectedColor = UIColor.redColor()
+        tabAnimation.iconSelectedColor = UIColor.redColor()
+        
+        let tabBarItem = RAMAnimatedTabBarItem(title: "Swap", image: UIImage.Asset.TabSwap.image, selectedImage: nil)
+        tabBarItem.textColor = UIColor.blackColor()
+        tabBarItem.iconColor = UIColor.blackColor()
+        tabBarItem.animation = tabAnimation
+        
+        self.tabBarItem = tabBarItem
+    }
     /*
     // MARK: - Navigation
 
