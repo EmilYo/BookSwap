@@ -20,6 +20,10 @@
 		8E31671B1C9C7D21001A20E6 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31671A1C9C7D21001A20E6 /* Constans.swift */; };
 		8E31671E1C9C83A6001A20E6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8E31671C1C9C83A6001A20E6 /* Localizable.strings */; };
 		8E3167201C9C8D55001A20E6 /* colors.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8E31671F1C9C8D55001A20E6 /* colors.txt */; };
+		8E3167221C9C9568001A20E6 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167211C9C9568001A20E6 /* BookModel.swift */; };
+		8E3167241C9C96A1001A20E6 /* AuthorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167231C9C96A1001A20E6 /* AuthorModel.swift */; };
+		8E3167261C9C972F001A20E6 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167251C9C972F001A20E6 /* BookViewModel.swift */; };
+		8E3167281C9C9C4D001A20E6 /* ErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3167271C9C9C4D001A20E6 /* ErrorHelper.swift */; };
 		8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */; };
 		8EECF4421C9C6A3F00D93C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4401C9C6A3F00D93C62 /* Main.storyboard */; };
 		8EECF4441C9C6A3F00D93C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4431C9C6A3F00D93C62 /* Assets.xcassets */; };
@@ -62,6 +66,10 @@
 		8E31671A1C9C7D21001A20E6 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		8E31671D1C9C83A6001A20E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8E31671F1C9C8D55001A20E6 /* colors.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colors.txt; sourceTree = SOURCE_ROOT; };
+		8E3167211C9C9568001A20E6 /* BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		8E3167231C9C96A1001A20E6 /* AuthorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorModel.swift; sourceTree = "<group>"; };
+		8E3167251C9C972F001A20E6 /* BookViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		8E3167271C9C9C4D001A20E6 /* ErrorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHelper.swift; sourceTree = "<group>"; };
 		8EECF4391C9C6A3E00D93C62 /* Book Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Swap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EECF4411C9C6A3F00D93C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				8E3167131C9C7B78001A20E6 /* UserModel.swift */,
+				8E3167211C9C9568001A20E6 /* BookModel.swift */,
+				8E3167231C9C96A1001A20E6 /* AuthorModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -129,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				8E3167151C9C7B89001A20E6 /* UserViewModel.swift */,
+				8E3167251C9C972F001A20E6 /* BookViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				8E3167181C9C7C29001A20E6 /* NetworkHelper.swift */,
+				8E3167271C9C9C4D001A20E6 /* ErrorHelper.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -399,9 +411,11 @@
 			files = (
 				E25DE6AB1C9C752300EEDCD4 /* MatchViewController.swift in Sources */,
 				8E3167161C9C7B89001A20E6 /* UserViewModel.swift in Sources */,
+				8E3167241C9C96A1001A20E6 /* AuthorModel.swift in Sources */,
 				8E31671B1C9C7D21001A20E6 /* Constans.swift in Sources */,
 				8E3167141C9C7B78001A20E6 /* UserModel.swift in Sources */,
 				E25DE6B41C9C756A00EEDCD4 /* ProfileNavigationController.swift in Sources */,
+				8E3167221C9C9568001A20E6 /* BookModel.swift in Sources */,
 				8E12B2E61C9C77A700CD574F /* ColorsGen.swift in Sources */,
 				8E3167191C9C7C29001A20E6 /* NetworkHelper.swift in Sources */,
 				E25DE68F1C9C730500EEDCD4 /* BSViewController.swift in Sources */,
@@ -409,9 +423,11 @@
 				E25DE6A31C9C749400EEDCD4 /* SwapViewController.swift in Sources */,
 				E25DE68D1C9C72F600EEDCD4 /* BSNavigationController.swift in Sources */,
 				E25DE6981C9C73B100EEDCD4 /* WantedNavigationController.swift in Sources */,
+				8E3167261C9C972F001A20E6 /* BookViewModel.swift in Sources */,
 				E25DE68A1C9C718400EEDCD4 /* MainTabBarViewController.swift in Sources */,
 				8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */,
 				E25DE6A51C9C74A600EEDCD4 /* SwapNavigationController.swift in Sources */,
+				8E3167281C9C9C4D001A20E6 /* ErrorHelper.swift in Sources */,
 				8E3167101C9C7A60001A20E6 /* LoginNavigationController.swift in Sources */,
 				8E12B2E71C9C77A700CD574F /* ImagesGen.swift in Sources */,
 				8E12B2E91C9C77A700CD574F /* StringsGen.swift in Sources */,
