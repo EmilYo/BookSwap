@@ -27,7 +27,7 @@
         <!--Profile Navigation Controller-->
         <scene sceneID="jiZ-70-UhY">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eV7-zF-I8V" customClass="ProfileNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="eV7-zF-I8V" customClass="ProfileNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vDr-Lj-WV1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

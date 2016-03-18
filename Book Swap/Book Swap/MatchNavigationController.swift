@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RAMAnimatedTabBarController
 
 class MatchNavigationController: BSNavigationController {
 
@@ -21,7 +22,18 @@ class MatchNavigationController: BSNavigationController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func configureTabBar() {
+        let tabAnimation = RAMBounceAnimation()
+        tabAnimation.textSelectedColor = UIColor.redColor()
+        tabAnimation.iconSelectedColor = UIColor.redColor()
+        
+        let tabBarItem = RAMAnimatedTabBarItem(title: "Match", image: UIImage.Asset.TabMatch.image, selectedImage: nil)
+        tabBarItem.textColor = UIColor.blackColor()
+        tabBarItem.iconColor = UIColor.blackColor()
+        tabBarItem.animation = tabAnimation
+        
+        self.tabBarItem = tabBarItem
+    }
     /*
     // MARK: - Navigation
 
