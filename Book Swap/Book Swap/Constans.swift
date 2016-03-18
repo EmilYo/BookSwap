@@ -9,10 +9,11 @@
 struct Constans {
     
     //Staging
-    static let baseUrl = "http://marina.starpin.pl"
-    static let apiKey = "NbbGxzanaJLxa7h73yMqnmgSEn8vjEtno1VSpUAo"
-    
-    static let apiUrl = "\(baseUrl)/api/v1"
+    static let apiUrl = "http://188.166.149.143/"
     
     static let facebookPermissions = ["email", "public_profile", "user_friends"]
+    
+    enum DefualtKey: String {
+        case UserToken = "UserToken"
+    }
 }

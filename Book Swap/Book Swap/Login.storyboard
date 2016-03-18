@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Navigation Controller-->
@@ -32,13 +33,48 @@
                     <view key="view" contentMode="scaleToFill" id="HjN-4J-e0s">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FM-Oy-E9Q" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="40" y="505" width="520" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="SIC-bI-cVQ"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookSwap" translatesAutoresizingMaskIntoConstraints="NO" id="7Sf-eu-n5S">
+                                <rect key="frame" x="215" y="94" width="170" height="170"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Wymieniaj książki z ludźmi z twoje okolicy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-CH-igL">
+                                <rect key="frame" x="20" y="304" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9FM-Oy-E9Q" secondAttribute="trailing" constant="20" id="9PM-F6-KmX"/>
+                            <constraint firstItem="iPw-CH-igL" firstAttribute="leading" secondItem="HjN-4J-e0s" secondAttribute="leading" constant="20" id="Cwp-Tt-qua"/>
+                            <constraint firstItem="7Sf-eu-n5S" firstAttribute="centerX" secondItem="HjN-4J-e0s" secondAttribute="centerX" id="DnA-uc-daB"/>
+                            <constraint firstItem="7Sf-eu-n5S" firstAttribute="top" secondItem="nx5-8U-gG9" secondAttribute="bottom" constant="30" id="IT4-Km-gae"/>
+                            <constraint firstItem="9FM-Oy-E9Q" firstAttribute="leading" secondItem="HjN-4J-e0s" secondAttribute="leadingMargin" constant="20" id="Jee-4s-3UF"/>
+                            <constraint firstItem="iPw-CH-igL" firstAttribute="top" secondItem="7Sf-eu-n5S" secondAttribute="bottom" constant="40" id="N9c-PJ-HST"/>
+                            <constraint firstAttribute="trailing" secondItem="iPw-CH-igL" secondAttribute="trailing" constant="20" id="ftr-ZN-IXN"/>
+                            <constraint firstItem="cHh-4E-5Xs" firstAttribute="top" secondItem="9FM-Oy-E9Q" secondAttribute="bottom" constant="50" id="gIS-0J-z40"/>
+                            <constraint firstItem="9FM-Oy-E9Q" firstAttribute="centerX" secondItem="HjN-4J-e0s" secondAttribute="centerX" id="rYQ-FC-OoB"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uEr-Ub-n1t"/>
+                    <connections>
+                        <outlet property="loginButton" destination="9FM-Oy-E9Q" id="ZpM-9U-qxG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6E-g0-Uuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="305"/>
+            <point key="canvasLocation" x="729" y="269"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BookSwap" width="170" height="170"/>
+    </resources>
 </document>

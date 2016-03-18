@@ -16,10 +16,8 @@ class NetworkHelper {
     static func request(method: Alamofire.Method, endpoint: String, parameters: [String: AnyObject]?, encoding: ParameterEncoding = ParameterEncoding.JSON, completionHandler: (response: Alamofire.Response<AnyObject, NSError>) -> Void) {
         
         showNetworkActivityIndicator()
-        
-        let headers = ["Authorization": Constans.apiKey]
-        
-        HTTPManager.sharedManager.request(method, "\(Constans.apiUrl)\(endpoint)", parameters: parameters, encoding: encoding, headers: headers)
+
+        HTTPManager.sharedManager.request(method, "\(Constans.apiUrl)\(endpoint)", parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON { (response) -> Void in
                 hideNetworkActivityIndicator()
@@ -31,13 +29,8 @@ class NetworkHelper {
         
         showNetworkActivityIndicator()
         
-        var headers = ["Authorization": Constans.apiKey]
         
-        //if let token = UserViewModel.userToken {
-        //    headers["Jwt-Token"] = "\(token)"
-        //}
-        
-        HTTPManager.sharedManager.request(method, "\(Constans.apiUrl)/me\(endpoint)", parameters: parameters, encoding: encoding, headers: headers)
+        HTTPManager.sharedManager.request(method, "\(Constans.apiUrl)/me\(endpoint)", parameters: parameters, encoding: encoding, headers: nil)
             .validate()
             .responseJSON { (response) -> Void in
                 hideNetworkActivityIndicator()

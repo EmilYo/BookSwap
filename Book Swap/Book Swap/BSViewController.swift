@@ -21,6 +21,9 @@ class BSViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func closeButtonPressed(sender: AnyObject) {
+        
+    }
 
     /*
     // MARK: - Navigation
