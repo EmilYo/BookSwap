@@ -9,20 +9,23 @@
 import Gloss
 
 struct BookModel: Decodable {
-    var bookId: Int?
-    var url: String?
+    var bookId: String?
+    var url: NSURL {
+        get {
+            return NSURL(string: "http://lubimyczytac.pl/ksiazka/295040/\(bookId!)")!
+        }
+    }
     var title: String?
     var author: String?
     var cover: NSURL {
         get {
-            return NSURL(string: "http://ext2.lubimyczytac.pl/book/\(bookId!)/image?request={%22width%22:%22500%22,%22height%22:%22500%22}")!
+            return NSURL(string: "http://ext2.lubimyczytac.pl/book/\(bookId!)/image?request=%7B%22width%22:%22500%22,%22height%22:%22600%22%7D")!
         }
     }
     var rating: Float?
     
     init?(json: JSON) {
         bookId = "id" <~~ json
-        url = "url" <~~ json
         title = "title" <~~ json
         author = "author" <~~ json
         rating = "rating" <~~ json

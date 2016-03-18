@@ -9,6 +9,7 @@
 import UIKit
 import Koloda
 import pop
+import Haneke
 
 private let numberOfCards: UInt = 4
 private let frameAnimationSpringBounciness:CGFloat = 9
@@ -58,7 +59,9 @@ extension SwapViewController: KolodaViewDelegate {
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://yalantis.com/")!)
+        if let book = bookViewModel.books?[Int(index)] {
+            UIApplication.sharedApplication().openURL(book.url)
+        }
     }
     
     func koloda(kolodaShouldApplyAppearAnimation koloda: KolodaView) -> Bool {
@@ -94,7 +97,7 @@ extension SwapViewController: KolodaViewDataSource {
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
         let bookTinderTabView = NSBundle.mainBundle().loadNibNamed("BookTinderTabView", owner: self, options: nil)[0] as? BookTinderTabView
         if let book = bookViewModel.books?[Int(index)] {
-            bookTinderTabView?.bookImageView.image = UIImage(named: "Book_\(index + 1)")
+            bookTinderTabView?.bookImageView.hnk_setImageFromURL(book.cover)
             bookTinderTabView?.titleLabel.text = book.title
             bookTinderTabView?.authorLabel.text = book.author
         }
