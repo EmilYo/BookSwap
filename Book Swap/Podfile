@@ -5,3 +5,5 @@ inhibit_all_warnings!
 #tools
 pod 'SnapKit', '~> 0.16'
 pod 'PromiseKit/CorePromise', '~> 3.0'
+pod 'FBSDKCoreKit', '~> 4.9'
+pod 'FBSDKLoginKit', '~> 4.9'
