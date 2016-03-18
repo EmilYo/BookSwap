@@ -16,6 +16,7 @@ pod 'Timberjack', '~> 0.0'
 #UI
 pod 'RAMAnimatedTabBarController', '~> 1.2.2'
 pod 'Koloda', '~> 2.0'
+pod 'GradientView', :git=> 'https://github.com/EmilYo/GradientView.git'
 
 post_install do |installer|
     `find Pods -regex 'Pods/pop.*\\.h' -print0 | xargs -0 sed -i '' 's/\\(<\\)pop\\/\\(.*\\)\\(>\\)/\\"\\2\\"/'`

@@ -163,6 +163,7 @@
 		8E12B2E01C9C706900CD574F /* View and Cantrollers */ = {
 			isa = PBXGroup;
 			children = (
+				8E3167311C9CAEEE001A20E6 /* Views */,
 				8EECF4401C9C6A3F00D93C62 /* Main.storyboard */,
 				E25DE68C1C9C72F600EEDCD4 /* BSNavigationController.swift */,
 				E25DE68E1C9C730500EEDCD4 /* BSViewController.swift */,
@@ -227,6 +228,13 @@
 				8E31672F1C9CAA23001A20E6 /* UIView+Identifier.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		8E3167311C9CAEEE001A20E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		8EECF4301C9C6A3E00D93C62 = {
