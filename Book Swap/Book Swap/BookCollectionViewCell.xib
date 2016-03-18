@@ -16,23 +16,23 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aKK-ow-l0c">
                         <rect key="frame" x="0.0" y="0.0" width="233" height="236"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sna-bD-nVN" customClass="GradientView" customModule="GradientView">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sna-bD-nVN" customClass="GradientView" customModule="Book_Swap" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="136" width="233" height="100"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ify-AK-qbF">
-                                <rect key="frame" x="8" y="8" width="217" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="8" y="46" width="217" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9r-We-3xk">
-                                <rect key="frame" x="8" y="71.5" width="217" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="8" y="74.5" width="217" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ify-AK-qbF" secondAttribute="trailing" constant="8" id="928-dH-TBl"/>
                             <constraint firstAttribute="bottom" secondItem="a9r-We-3xk" secondAttribute="bottom" constant="8" id="EaK-QP-ZTq"/>
@@ -40,7 +40,7 @@
                             <constraint firstAttribute="height" constant="100" id="cFP-HZ-0EP"/>
                             <constraint firstItem="ify-AK-qbF" firstAttribute="leading" secondItem="sna-bD-nVN" secondAttribute="leading" constant="8" id="clf-qH-7gn"/>
                             <constraint firstAttribute="trailing" secondItem="a9r-We-3xk" secondAttribute="trailing" constant="8" id="hbI-VD-O6j"/>
-                            <constraint firstItem="ify-AK-qbF" firstAttribute="top" secondItem="sna-bD-nVN" secondAttribute="top" constant="8" id="lTY-1Q-R1u"/>
+                            <constraint firstItem="a9r-We-3xk" firstAttribute="top" secondItem="ify-AK-qbF" secondAttribute="bottom" constant="8" id="sKx-kd-mL6"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -58,7 +58,6 @@
             <size key="customSize" width="233" height="236"/>
             <connections>
                 <outlet property="authorLabel" destination="a9r-We-3xk" id="HcF-e2-dfR"/>
-                <outlet property="gradientView" destination="sna-bD-nVN" id="1UE-EI-ID6"/>
                 <outlet property="imageView" destination="aKK-ow-l0c" id="9PL-mO-LAX"/>
                 <outlet property="titleLabel" destination="ify-AK-qbF" id="cOD-fl-6OJ"/>
             </connections>

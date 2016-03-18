@@ -27,6 +27,7 @@
 		8E31672C1C9CA9E4001A20E6 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31672A1C9CA9E4001A20E6 /* BookCollectionViewCell.swift */; };
 		8E31672D1C9CA9E4001A20E6 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E31672B1C9CA9E4001A20E6 /* BookCollectionViewCell.xib */; };
 		8E3167301C9CAA23001A20E6 /* UIView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31672F1C9CAA23001A20E6 /* UIView+Identifier.swift */; };
+		8E9860091C9CC83700E9B4F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9860081C9CC83700E9B4F4 /* GradientView.swift */; };
 		8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */; };
 		8EECF4421C9C6A3F00D93C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4401C9C6A3F00D93C62 /* Main.storyboard */; };
 		8EECF4441C9C6A3F00D93C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4431C9C6A3F00D93C62 /* Assets.xcassets */; };
@@ -82,6 +83,7 @@
 		8E31672A1C9CA9E4001A20E6 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E31672B1C9CA9E4001A20E6 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		8E31672F1C9CAA23001A20E6 /* UIView+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Identifier.swift"; sourceTree = "<group>"; };
+		8E9860081C9CC83700E9B4F4 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8EECF4391C9C6A3E00D93C62 /* Book Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Swap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EECF4411C9C6A3F00D93C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		8E3167311C9CAEEE001A20E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8E9860081C9CC83700E9B4F4 /* GradientView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				E25DE6C21C9CA7FF00EEDCD4 /* Appearance.swift in Sources */,
 				E25DE6A91C9C751700EEDCD4 /* MatchNavigationController.swift in Sources */,
 				E25DE6B61C9C854100EEDCD4 /* BookKolodaView.swift in Sources */,
+				8E9860091C9CC83700E9B4F4 /* GradientView.swift in Sources */,
 				E25DE69A1C9C73C100EEDCD4 /* WantedViewController.swift in Sources */,
 				8E12B2E81C9C77A700CD574F /* StoryboardsGen.swift in Sources */,
 			);
