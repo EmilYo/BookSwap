@@ -12,10 +12,12 @@ pod 'AsyncSwift', '~> 1.6'
 pod 'Alamofire', '~> 3.1'
 pod 'Timepiece', '~> 0.4'
 pod 'Timberjack', '~> 0.0'
+pod 'HanekeSwift', '~> 0.10'
 
 #UI
 pod 'RAMAnimatedTabBarController', '~> 1.2.2'
 pod 'Koloda', '~> 2.0'
+pod 'GradientView', :git=> 'https://github.com/EmilYo/GradientView.git'
 pod 'AFImageHelper', '~> 3.0'
 
 post_install do |installer|
