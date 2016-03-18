@@ -82,7 +82,6 @@ class MainTabBarViewController: RAMAnimatedTabBarController {
         
         viewControllers = controllers
         
-        selectedIndex = 2
     }
 }
 

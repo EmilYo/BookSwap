@@ -15,7 +15,7 @@ private let numberOfCards: UInt = 4
 private let frameAnimationSpringBounciness:CGFloat = 9
 private let frameAnimationSpringSpeed:CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
-private let kolodaAlphaValueSemiTransparent:CGFloat = 0.05
+private let kolodaAlphaValueSemiTransparent:CGFloat = 0.00
 
 class SwapViewController: BSViewController {
 
