@@ -9,7 +9,7 @@
 struct Constans {
     
     //Staging
-    static let apiUrl = "http://188.166.149.143/"
+    static let apiUrl = "http://188.166.149.143"
     
     static let facebookPermissions = ["email", "public_profile", "user_friends"]
     

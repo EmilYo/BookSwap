@@ -27,10 +27,13 @@ class NetworkHelper {
     
     static func authorizedRequest(method: Alamofire.Method, endpoint: String, parameters: [String: AnyObject]?, encoding: ParameterEncoding = ParameterEncoding.JSON, completionHandler: (response: Alamofire.Response<AnyObject, NSError>) -> Void) {
         
+        guard let token = NSUserDefaults.standardUserDefaults().stringForKey(Constans.DefualtKey.UserToken.rawValue) else { return }
+        
         showNetworkActivityIndicator()
         
+        let headers = ["X-BookSwap-Token": token]
         
-        HTTPManager.sharedManager.request(method, "\(Constans.apiUrl)/me\(endpoint)", parameters: parameters, encoding: encoding, headers: nil)
+        HTTPManager.sharedManager.request(method, "\(Constans.apiUrl)\(endpoint)", parameters: parameters, encoding: encoding, headers: headers)
             .validate()
             .responseJSON { (response) -> Void in
                 hideNetworkActivityIndicator()
