@@ -13,4 +13,28 @@ extension UIColor {
   }
 }
 
-// No color found
+extension UIColor {
+  enum Name {
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#f5a623"></span>
+    /// Alpha: 100% <br/> (0xf5a623ff)
+    case First
+    /// <span style="display:block;width:3em;height:2em;border:1px solid black;background:#9013fe"></span>
+    /// Alpha: 100% <br/> (0x9013feff)
+    case Second
+
+    var rgbaValue: UInt32! {
+      switch self {
+      case .First: return 0xf5a623ff
+      case .Second: return 0x9013feff
+      }
+    }
+
+    var color: UIColor {
+      return UIColor(named: self)
+    }
+  }
+
+  convenience init(named name: Name) {
+    self.init(rgbaValue: name.rgbaValue)
+  }
+}

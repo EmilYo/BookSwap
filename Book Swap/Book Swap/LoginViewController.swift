@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class LoginViewController: BSViewController {
 
+    @IBOutlet weak var loginButton: FBSDKLoginButton! {
+        didSet {
+            loginButton.readPermissions = Constans.facebookPermissions
+            loginButton.delegate = self
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         title = L10n.LocLoginTitle.string
@@ -31,4 +38,23 @@ class LoginViewController: BSViewController {
     }
     */
 
+}
+
+extension LoginViewController: FBSDKLoginButtonDelegate {
+    func loginButtonWillLogin(loginButton: FBSDKLoginButton!) -> Bool {
+        return true
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        if error != nil {
+            //TODO: Handle error
+        } else {
+            NSUserDefaults.standardUserDefaults().setObject(result.token.tokenString, forKey: Constans.DefualtKey.UserToken.rawValue)
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
 }

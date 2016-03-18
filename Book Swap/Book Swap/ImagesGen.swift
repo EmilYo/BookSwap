@@ -4,6 +4,7 @@ import UIKit
 
 extension UIImage {
   enum Asset: String {
+    case BookSwap = "BookSwap"
     case TabAccount = "TabAccount"
     case TabMatch = "TabMatch"
     case TabMyBooks = "TabMyBooks"

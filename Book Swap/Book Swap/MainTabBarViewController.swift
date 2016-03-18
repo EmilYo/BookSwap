@@ -15,17 +15,21 @@ class MainTabBarViewController: RAMAnimatedTabBarController {
         case MyBooks, Wanted, Swap, Match, Profile
     }
     
+    private var firstLoad = true
+    
     
     override func viewDidLoad() {
         configureTabBar()
         
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
-        //checkLogin()
+        super.viewDidAppear(animated)
+        if firstLoad {
+            checkLogin()
+            firstLoad = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,9 +38,11 @@ class MainTabBarViewController: RAMAnimatedTabBarController {
     }
     
     private func checkLogin() {
-        guard NSUserDefaults.standardUserDefaults().stringForKey(Constans.DefualtKey.UserToken.rawValue) == nil else { return }
-        
-        presentViewController(StoryboardScene.Login.initialViewController(), animated: true, completion: nil)
+        if let token = NSUserDefaults.standardUserDefaults().stringForKey(Constans.DefualtKey.UserToken.rawValue) {
+            print("Facebook Token: \(token)")
+        } else {
+            presentViewController(StoryboardScene.Login.initialViewController(), animated: true, completion: nil)
+        }
     }
     
     private func configureTabBar() {
