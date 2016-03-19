@@ -76,12 +76,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         alertController.addAction(cancelAction)
-        let yesAction = UIAlertAction(title: L10n.LocYes.string, style: .Cancel) { (UIAlertAction) -> Void in
-            //TODO: przełączyć na wymiany
+        let yesAction = UIAlertAction(title: L10n.LocYes.string, style: .Default) { (UIAlertAction) -> Void in
+            if let mainTabBarViewController = self.window?.rootViewController as? MainTabBarViewController {
+                mainTabBarViewController.selectedIndex = 3
+                mainTabBarViewController.setSelectIndex(from: 0, to: 3)
+            }
         }
         alertController.addAction(yesAction)
-        
         window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+
+
     }
 }
 
