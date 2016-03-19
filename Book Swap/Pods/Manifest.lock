@@ -20,6 +20,7 @@ PODS:
   - PKHUD (3.1.0)
   - pop (1.0.9)
   - PromiseKit/CorePromise (3.0.3)
+  - QRCodeReader.swift (5.4.0)
   - RAMAnimatedTabBarController (1.2.2)
   - SnapKit (0.19.1)
   - Timberjack (0.0.2)
@@ -37,6 +38,7 @@ DEPENDENCIES:
   - Koloda (~> 2.0)
   - PKHUD (~> 3.1)
   - PromiseKit/CorePromise (~> 3.0)
+  - QRCodeReader.swift (~> 5.4.0)
   - RAMAnimatedTabBarController (~> 1.2.2)
   - SnapKit (~> 0.16)
   - Timberjack (~> 0.0)
@@ -56,6 +58,7 @@ SPEC CHECKSUMS:
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PromiseKit: 00ec2a219bf5ad2833f95977698e921932b8dfd3
+  QRCodeReader.swift: b2cdd74a99416c17a4c9c48f0a19db4c5164c5c7
   RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
   Timberjack: 4181fb4fa5c0c02a0855deb5aa1ade6043db7b42

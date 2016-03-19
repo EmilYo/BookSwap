@@ -20,6 +20,7 @@ pod 'Koloda', '~> 2.0'
 pod 'AFImageHelper', '~> 3.0'
 pod 'PKHUD', '~> 3.1'
 pod 'ASValueTrackingSlider', '~> 0.11'
+pod 'QRCodeReader.swift', '~> 5.4.0'
 
 
 post_install do |installer|
