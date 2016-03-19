@@ -27,6 +27,8 @@
 		8E31672C1C9CA9E4001A20E6 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31672A1C9CA9E4001A20E6 /* BookCollectionViewCell.swift */; };
 		8E31672D1C9CA9E4001A20E6 /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E31672B1C9CA9E4001A20E6 /* BookCollectionViewCell.xib */; };
 		8E3167301C9CAA23001A20E6 /* UIView+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E31672F1C9CAA23001A20E6 /* UIView+Identifier.swift */; };
+		8E6237911C9CF65900A2B7E6 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E62378F1C9CF65900A2B7E6 /* MatchTableViewCell.swift */; };
+		8E6237921C9CF65900A2B7E6 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E6237901C9CF65900A2B7E6 /* MatchTableViewCell.xib */; };
 		8E9860091C9CC83700E9B4F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9860081C9CC83700E9B4F4 /* GradientView.swift */; };
 		8EDC2E4B1C9CD12E009E643B /* AddBookNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC2E4A1C9CD12E009E643B /* AddBookNavigationController.swift */; };
 		8EDC2E4D1C9CD14E009E643B /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC2E4C1C9CD14E009E643B /* AddBookViewController.swift */; };
@@ -89,6 +91,8 @@
 		8E31672A1C9CA9E4001A20E6 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E31672B1C9CA9E4001A20E6 /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
 		8E31672F1C9CAA23001A20E6 /* UIView+Identifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Identifier.swift"; sourceTree = "<group>"; };
+		8E62378F1C9CF65900A2B7E6 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		8E6237901C9CF65900A2B7E6 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		8E9860081C9CC83700E9B4F4 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8EDC2E4A1C9CD12E009E643B /* AddBookNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookNavigationController.swift; sourceTree = "<group>"; };
 		8EDC2E4C1C9CD14E009E643B /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +262,15 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		8E62378E1C9CF64000A2B7E6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8E62378F1C9CF65900A2B7E6 /* MatchTableViewCell.swift */,
+				8E6237901C9CF65900A2B7E6 /* MatchTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		8EECF4301C9C6A3E00D93C62 = {
 			isa = PBXGroup;
 			children = (
@@ -329,9 +342,10 @@
 		E25DE6A71C9C74DD00EEDCD4 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				8E62378E1C9CF64000A2B7E6 /* Cells */,
+				E25DE6AC1C9C752A00EEDCD4 /* Match.storyboard */,
 				E25DE6A81C9C751700EEDCD4 /* MatchNavigationController.swift */,
 				E25DE6AA1C9C752300EEDCD4 /* MatchViewController.swift */,
-				E25DE6AC1C9C752A00EEDCD4 /* Match.storyboard */,
 			);
 			name = Match;
 			sourceTree = "<group>";
@@ -433,6 +447,7 @@
 				E25DE6B01C9C755100EEDCD4 /* Profile.storyboard in Resources */,
 				E25DE6C01C9C8E7700EEDCD4 /* BookTinderTabView.xib in Resources */,
 				E25DE6AD1C9C752A00EEDCD4 /* Match.storyboard in Resources */,
+				8E6237921C9CF65900A2B7E6 /* MatchTableViewCell.xib in Resources */,
 				E25DE6BB1C9C8AE300EEDCD4 /* BookOverlayView.xib in Resources */,
 				E25DE6951C9C735900EEDCD4 /* MyBooks.storyboard in Resources */,
 				8E31671E1C9C83A6001A20E6 /* Localizable.strings in Resources */,
@@ -507,6 +522,7 @@
 				8E3167141C9C7B78001A20E6 /* UserModel.swift in Sources */,
 				E25DE6B91C9C8ABE00EEDCD4 /* BookOverlayView.swift in Sources */,
 				E25DE6B41C9C756A00EEDCD4 /* ProfileNavigationController.swift in Sources */,
+				8E6237911C9CF65900A2B7E6 /* MatchTableViewCell.swift in Sources */,
 				8E3167221C9C9568001A20E6 /* BookModel.swift in Sources */,
 				8E12B2E61C9C77A700CD574F /* ColorsGen.swift in Sources */,
 				8E31672C1C9CA9E4001A20E6 /* BookCollectionViewCell.swift in Sources */,
