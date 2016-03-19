@@ -79,11 +79,14 @@ extension AddBookViewController: UICollectionViewDataSource {
 
 extension AddBookViewController: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        bookViewModel.selectedBook = bookViewModel.books![indexPath.row]
+        collectionView.deselectItemAtIndexPath(indexPath, animated: true)
+        let book = bookViewModel.books![indexPath.row]
+        bookViewModel.selectedBook = book
         bookViewModel.offerBook { (error) -> Void in
             if error != nil {
                 //TOOD: handle
             } else {
+                NSNotificationCenter.defaultCenter().postNotificationName(Constans.NotificationKey.BookAdded.rawValue, object: nil)
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }

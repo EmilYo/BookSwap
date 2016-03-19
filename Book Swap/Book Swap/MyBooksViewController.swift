@@ -26,14 +26,9 @@ class MyBooksViewController: BSViewController {
         automaticallyAdjustsScrollViewInsets = false
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")
-
-        bookViewModel.offeredBooks { (error) -> Void in
-            if error != nil {
-                //TODO: Handle error
-            } else {
-                self.collectionView.reloadData()
-            }
-        }
+        loadData()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedNotifications:", name: Constans.NotificationKey.UserLogged.rawValue, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedNotifications:", name: Constans.NotificationKey.BookAdded.rawValue, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +38,20 @@ class MyBooksViewController: BSViewController {
     
     func addNewBook(sender: UIBarButtonItem) {
         performSegue(StoryboardSegue.MyBooks.PresentAddBookNavigationController)
+    }
+    
+    func loadData() {
+        bookViewModel.offeredBooks { (error) -> Void in
+            if error != nil {
+                //TODO: Handle error
+            } else {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func receivedNotifications(notification: NSNotification) {
+        loadData()
     }
     
     /*

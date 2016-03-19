@@ -22,7 +22,7 @@ class BookViewModel {
     var selectedBook: BookModel?
     
     func searchBook(string: String, completion: (error: NSError?) -> Void) {
-        NetworkHelper.request(.GET, endpoint: searchEndpoint + string.URLString, parameters: nil) { (response) -> Void in
+        NetworkHelper.request(.GET, endpoint: searchEndpoint + string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!, parameters: nil) { (response) -> Void in
             if response.result.error != nil {
                 completion(error: response.result.error)
             } else {
@@ -38,8 +38,7 @@ class BookViewModel {
     
     func offerBook(completion: (error: NSError?) -> Void) {
         guard selectedBook != nil else {
-            completion(error: ErrorHelper.error)
-            return
+            return completion(error: ErrorHelper.error)
         }
         
         NetworkHelper.authorizedRequest(.POST, endpoint: offerEndpoint + "\(selectedBook!.bookId!)", parameters: nil) { (response) -> Void in
@@ -53,8 +52,7 @@ class BookViewModel {
     
     func wantBook(completion: (error: NSError?) -> Void) {
         guard selectedBook != nil else {
-            completion(error: ErrorHelper.error)
-            return
+            return completion(error: ErrorHelper.error)
         }
         
         NetworkHelper.authorizedRequest(.POST, endpoint: wantEndpoint + "\(selectedBook!.bookId!)", parameters: nil) { (response) -> Void in
