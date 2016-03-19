@@ -61,11 +61,18 @@ extension MatchViewController: UITableViewDataSource {
         if let myBookUrl = match.bookHeWants?.cover {
             cell?.leftImageView.hnk_setImageFromURL(myBookUrl)
         }
+        cell?.leftLabel.text = match.bookHeWants!.title!
+        
         if let otherBookUrl = match.bookYouWant?.cover {
             cell?.rightImageView.hnk_setImageFromURL(otherBookUrl)
         }
+        cell?.rightLabel.text = match.bookYouWant!.title!
         
-        cell?.label.text = L10n.LocMatchLabel(match.bookHeWants!.title!, match.bookYouWant!.title!, "\(match.user!.firstName!) \(match.user!.lastName!)").string;
+        cell?.userNameLabel.text = "\(match.user!.firstName!) \(match.user!.lastName!)"
+        cell?.emailLabel.text = match.user!.email!
+        if let url = match.user!.avatar {
+            cell?.avatarImageView.hnk_setImageFromURL(url)
+        }
 
         return cell!
     }
@@ -73,7 +80,7 @@ extension MatchViewController: UITableViewDataSource {
 
 extension MatchViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 220
+        return 300
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

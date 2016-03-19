@@ -10,9 +10,24 @@ import UIKit
 
 class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var leftImageView: UIImageView!
+    @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var rightImageView: UIImageView!
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
 
+    @IBOutlet weak var avatarImageView: UIImageView! {
+        didSet {
+            avatarImageView.layer.cornerRadius = 25
+        }
+    }
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    @IBOutlet weak var emialImageView: UIImageView! {
+        didSet {
+            emialImageView.tintColor = UIColor(named: .NavBarTint)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,8 +43,10 @@ class MatchTableViewCell: UITableViewCell {
         super.prepareForReuse()
         leftImageView.hnk_cancelSetImage()
         rightImageView.hnk_cancelSetImage()
+        avatarImageView.hnk_cancelSetImage()
         leftImageView.image = nil
         rightImageView.image = nil
+        avatarImageView.image = nil
     }
     
 }

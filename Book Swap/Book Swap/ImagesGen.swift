@@ -23,6 +23,7 @@ extension UIImage {
     case Ic_undo = "ic_undo"
     case Overlay_like = "overlay_like"
     case Overlay_skip = "overlay_skip"
+    case Mail = "mail"
     case NoOverlayImage = "noOverlayImage"
     case TabAccount = "TabAccount"
     case TabMatch = "TabMatch"

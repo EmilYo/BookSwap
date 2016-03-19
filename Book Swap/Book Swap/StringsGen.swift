@@ -25,7 +25,7 @@ enum L10n {
   case LocProfileTitle
   /// Login
   case LocLoginTitle
-  /// Add book
+  /// Dodaj książkę
   case LocAddBookTitle
   /// Wymieniaj książki z ludźmi z twoje okolicy.
   case LocLoginLabel

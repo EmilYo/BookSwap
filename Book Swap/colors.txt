@@ -1,5 +1,3 @@
-First   : 0xF5A623
-Second  : 0x9013FE
 NavBarTint              :0x566D8C
 TabBarSelectedIcon      :0xF26457
 TabBarSelectedText      :0xF26457
