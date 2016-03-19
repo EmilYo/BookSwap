@@ -8,9 +8,11 @@
 
 import UIKit
 import Haneke
+import QRCodeReader
+import AVFoundation
 
 class MyBooksViewController: BSViewController {
-    
+
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.registerNib(UINib(nibName: BookCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
@@ -18,6 +20,7 @@ class MyBooksViewController: BSViewController {
     }
     
     private var bookViewModel = BookViewModel()
+    lazy var readerVC = QRCodeReaderViewController(metadataObjectTypes: [AVMetadataObjectTypeEAN13Code])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class MyBooksViewController: BSViewController {
         navigationItem.title = L10n.LocMyBooksTitle.string
         automaticallyAdjustsScrollViewInsets = false
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Camera, target: self, action: "scanAction:")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")
         loadData()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedNotifications:", name: Constans.NotificationKey.UserLogged.rawValue, object: nil)
@@ -61,16 +65,6 @@ class MyBooksViewController: BSViewController {
         loadData()
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func trash(sender: UISwipeGestureRecognizer) {
         if let cell = sender.view as? UICollectionViewCell {
             let i = collectionView.indexPathForCell(cell)!.item
@@ -98,7 +92,44 @@ class MyBooksViewController: BSViewController {
             }
         }
     }
+    
+    func scanAction(sender: AnyObject) {
+        readerVC.delegate = self
+        
+        readerVC.completionBlock = { (result: QRCodeReaderResult?) in
+            if let barCode = result?.value {
+                self.bookViewModel.searchBarCodeBook(barCode, completion: { (error) -> Void in
+                    if error != nil {
+                        
+                    } else {
+                        if self.bookViewModel.selectedBook != nil {
+                            self.bookViewModel.offerBook({ (error) -> Void in
+                                if error != nil {
+                                    
+                                } else {
+                                    self.loadData()
+                                }
+                            })
+                        }
+                    }
+                })
+            }
+        }
+        
+        // Presents the readerVC as modal form sheet
+        readerVC.modalPresentationStyle = .FormSheet
+        presentViewController(readerVC, animated: true, completion: nil)
+    }
+}
 
+extension MyBooksViewController: QRCodeReaderViewControllerDelegate {
+    func reader(reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func readerDidCancel(reader: QRCodeReaderViewController) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }
 
 extension MyBooksViewController: UICollectionViewDataSource {
