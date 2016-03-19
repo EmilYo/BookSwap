@@ -9,30 +9,76 @@
 import UIKit
 
 class MatchViewController: BSViewController {
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.registerNib(UINib(nibName: MatchTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MatchTableViewCell.identifier)
+        }
+    }
 
-    @IBOutlet weak var bookKolodaView: BookKolodaView!
+    private var matchViewModel = MatchViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = L10n.LocTabMatch.string
-        // Do any additional setup after loading the view.
+        automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
     }
 
+    func loadData() {
+        matchViewModel.downloadMatches { (error) -> Void in
+            if error != nil {
+                //TODO: do it
+            } else {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+extension MatchViewController: UITableViewDataSource {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matchViewModel.matches?.count ?? 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(MatchTableViewCell.identifier, forIndexPath: indexPath) as? MatchTableViewCell
+        
+        cell?.prepareForReuse()
+        
+        let match = matchViewModel.matches![indexPath.row]
+        
+        if let myBookUrl = match.bookHeWants?.cover {
+            cell?.leftImageView.hnk_setImageFromURL(myBookUrl)
+        }
+        if let otherBookUrl = match.bookYouWant?.cover {
+            cell?.rightImageView.hnk_setImageFromURL(otherBookUrl)
+        }
+
+        return cell!
+    }
+}
+
+extension MatchViewController: UITableViewDelegate {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 220
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let match = matchViewModel.matches?[indexPath.row],
+            let user = match.user,
+            let url = NSURL(string: "mailto:\(user.email!)") where UIApplication.sharedApplication().canOpenURL(url) {
+                UIApplication.sharedApplication().openURL(url)
+        }
+        
+    }
+}
