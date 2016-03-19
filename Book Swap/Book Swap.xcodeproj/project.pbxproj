@@ -681,7 +681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bookswap.Book-Swap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25c0a7ae-d83f-43f2-84a5-6a69eb7d8b95";
+				PROVISIONING_PROFILE = "b4a40f82-0d14-4c9b-9730-def37e0dfcde";
 			};
 			name = Debug;
 		};

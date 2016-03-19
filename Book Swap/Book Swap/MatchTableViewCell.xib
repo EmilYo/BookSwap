@@ -15,28 +15,64 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xl0-iO-ecc">
-                        <rect key="frame" x="5" y="5" width="152.5" height="173.5"/>
+                        <rect key="frame" x="5" y="5" width="130" height="173.5"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Dv-yW-pGA">
-                        <rect key="frame" x="162.5" y="5" width="152.5" height="173.5"/>
+                        <rect key="frame" x="185" y="5" width="130" height="173.5"/>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TabSwap" translatesAutoresizingMaskIntoConstraints="NO" id="LWy-vO-j1Q">
+                        <rect key="frame" x="139" y="79.5" width="42" height="24"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8X-hL-z6B" customClass="GradientView" customModule="Book_Swap" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="111.5" width="320" height="71.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB3-iR-Ov3">
+                                <rect key="frame" x="8" y="46.5" width="304" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bB3-iR-Ov3" firstAttribute="leading" secondItem="U8X-hL-z6B" secondAttribute="leading" constant="8" id="LFy-Nc-J8g"/>
+                            <constraint firstAttribute="bottom" secondItem="bB3-iR-Ov3" secondAttribute="bottom" constant="8" id="YSd-mv-DYm"/>
+                            <constraint firstAttribute="trailing" secondItem="bB3-iR-Ov3" secondAttribute="trailing" constant="8" id="ibX-Ny-w4h"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="8Dv-yW-pGA" firstAttribute="leading" secondItem="xl0-iO-ecc" secondAttribute="trailing" constant="5" id="19y-sE-9GK"/>
+                    <constraint firstItem="8Dv-yW-pGA" firstAttribute="leading" secondItem="xl0-iO-ecc" secondAttribute="trailing" constant="50" id="19y-sE-9GK"/>
+                    <constraint firstItem="LWy-vO-j1Q" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1Wz-TK-NTX"/>
                     <constraint firstItem="xl0-iO-ecc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="3ch-t2-reB"/>
+                    <constraint firstItem="LWy-vO-j1Q" firstAttribute="leading" secondItem="xl0-iO-ecc" secondAttribute="trailing" constant="4" id="7VC-Ki-qG5"/>
+                    <constraint firstAttribute="bottom" secondItem="U8X-hL-z6B" secondAttribute="bottom" id="7xa-n4-uXO"/>
+                    <constraint firstItem="8Dv-yW-pGA" firstAttribute="leading" secondItem="LWy-vO-j1Q" secondAttribute="trailing" constant="4" id="AQa-bQ-74T"/>
+                    <constraint firstAttribute="trailing" secondItem="U8X-hL-z6B" secondAttribute="trailing" id="Cva-zm-HDW"/>
                     <constraint firstItem="8Dv-yW-pGA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="JsI-ic-E0q"/>
                     <constraint firstItem="8Dv-yW-pGA" firstAttribute="width" secondItem="xl0-iO-ecc" secondAttribute="width" id="Nxp-1e-QxC"/>
                     <constraint firstAttribute="trailing" secondItem="8Dv-yW-pGA" secondAttribute="trailing" constant="5" id="P3I-A4-6UB"/>
                     <constraint firstItem="xl0-iO-ecc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="RF4-wn-HSr"/>
+                    <constraint firstItem="U8X-hL-z6B" firstAttribute="top" secondItem="LWy-vO-j1Q" secondAttribute="bottom" constant="8" id="SYT-7B-I2v"/>
+                    <constraint firstItem="U8X-hL-z6B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TN2-yj-x0P"/>
                     <constraint firstAttribute="bottom" secondItem="xl0-iO-ecc" secondAttribute="bottom" constant="5" id="ZtG-Ea-NB6"/>
                     <constraint firstAttribute="bottom" secondItem="8Dv-yW-pGA" secondAttribute="bottom" constant="5" id="lfs-RG-I5N"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="label" destination="bB3-iR-Ov3" id="tmO-rn-1nZ"/>
                 <outlet property="leftImageView" destination="xl0-iO-ecc" id="GCC-uK-1jV"/>
                 <outlet property="rightImageView" destination="8Dv-yW-pGA" id="roT-la-nfW"/>
             </connections>
             <point key="canvasLocation" x="360" y="385"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="TabSwap" width="24" height="24"/>
+    </resources>
 </document>

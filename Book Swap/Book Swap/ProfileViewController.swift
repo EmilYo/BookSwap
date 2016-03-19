@@ -20,7 +20,7 @@ class ProfileViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = L10n.LocTabProfile.string
+        navigationItem.title = L10n.LocProfileTitle.string
         
         // Do any additional setup after loading the view.
     }
