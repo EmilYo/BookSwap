@@ -52,6 +52,9 @@ class SwapViewController: BSViewController {
             if error != nil {
                 
             }
+            if (self.bookViewModel.books?.count > 0) {
+                self.hideEmptyView()
+            }
             self.bookKolodaView.resetCurrentCardNumber()
         }
     }
@@ -96,7 +99,11 @@ extension SwapViewController: KolodaViewDelegate {
                 if (error != nil) {
                     
                 }
+                if (self.bookViewModel.books?.count == 1) {
+                    self.downloadNearbyBooks()
+                }
             }
+            
         }
     }
 }
@@ -106,9 +113,13 @@ extension SwapViewController: KolodaViewDataSource {
     
     func koloda(kolodaNumberOfCards koloda:KolodaView) -> UInt {
         if let books = bookViewModel.books {
-            return UInt(books.count)
+            if books.count > 0 {
+                return UInt(books.count)
+            }
         }
+        showEmptyView("Brak ksiązek w okolicy")
         return 0
+        
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {

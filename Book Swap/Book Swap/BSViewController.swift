@@ -9,10 +9,10 @@
 import UIKit
 
 class BSViewController: UIViewController {
-
+    
+    private var emptyBookView: EmptyBookView?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +23,29 @@ class BSViewController: UIViewController {
     
     func closeButtonPressed(sender: AnyObject) {
         
+    }
+    
+    func showEmptyView(title: String) {
+        if (emptyBookView == nil) {
+            emptyBookView = EmptyBookView(frame: view.bounds)
+            view.addSubview(emptyBookView!)
+//            UIView.animateWithDuration(1) { () -> Void in
+//                self.emptyBookView?.alpha = 1
+//            }
+            
+        }
+        emptyBookView?.titleLabel?.text = title
+    }
+    
+    func hideEmptyView() {
+        if (emptyBookView != nil) {
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.emptyBookView?.alpha = 0.0
+                }, completion: { (Success) -> Void in
+                    self.emptyBookView?.removeFromSuperview()
+                    self.emptyBookView = nil
+            })
+        }
     }
 
     /*
