@@ -84,6 +84,7 @@ extension MatchViewController: UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         if let match = matchViewModel.matches?[indexPath.row],
             let user = match.user,
             let url = NSURL(string: "mailto:\(user.email!)") where UIApplication.sharedApplication().canOpenURL(url) {
