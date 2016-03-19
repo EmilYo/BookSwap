@@ -47,7 +47,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Wymieniaj książki z ludźmi z twoje okolicy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-CH-igL">
                                 <rect key="frame" x="20" y="304" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -66,6 +66,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uEr-Ub-n1t"/>
                     <connections>
+                        <outlet property="label" destination="iPw-CH-igL" id="yT1-5c-0Uf"/>
                         <outlet property="loginButton" destination="9FM-Oy-E9Q" id="ZpM-9U-qxG"/>
                     </connections>
                 </viewController>

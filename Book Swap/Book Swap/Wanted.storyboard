@@ -19,6 +19,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9FS-t7-AwF">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Llr-df-PPc">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -26,6 +27,10 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="jiN-Gk-Od3" id="La7-80-B3v"/>
+                                    <outlet property="delegate" destination="jiN-Gk-Od3" id="4Ti-mD-bIR"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,6 +42,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iqA-ht-hvx"/>
+                    <connections>
+                        <outlet property="collectionView" destination="9FS-t7-AwF" id="1v6-zk-9bW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFX-HJ-QeY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,11 @@ import UIKit
 import FBSDKLoginKit
 
 class LoginViewController: BSViewController {
+    @IBOutlet weak var label: UILabel! {
+        didSet {
+            label.text = L10n.LocLoginLabel.string
+        }
+    }
 
     @IBOutlet weak var loginButton: FBSDKLoginButton! {
         didSet {
