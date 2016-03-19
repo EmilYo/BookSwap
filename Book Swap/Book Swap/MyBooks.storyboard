@@ -44,11 +44,83 @@
                     <navigationItem key="navigationItem" id="ose-iH-Q1N"/>
                     <connections>
                         <outlet property="collectionView" destination="wDN-nw-tfA" id="KoV-KA-Z5l"/>
+                        <segue destination="PtH-LF-pnY" kind="presentation" identifier="PresentAddBookNavigationController" id="hp2-2b-1FX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phC-ea-OkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1157" y="337"/>
+        </scene>
+        <!--Add Book Navigation Controller-->
+        <scene sceneID="KjQ-jm-tEz">
+            <objects>
+                <navigationController id="PtH-LF-pnY" customClass="AddBookNavigationController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vXK-j9-dhP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uX9-gO-Pmr" kind="relationship" relationship="rootViewController" id="gJX-y0-cAX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9TP-T4-ntm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="337"/>
+        </scene>
+        <!--Add Book View Controller-->
+        <scene sceneID="oVV-ct-oYR">
+            <objects>
+                <viewController id="uX9-gO-Pmr" customClass="AddBookViewController" customModule="Book_Swap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KPI-of-ylL"/>
+                        <viewControllerLayoutGuide type="bottom" id="8hU-RP-z2z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uOB-lS-jMh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bfT-rv-15q">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uX9-gO-Pmr" id="FE4-gM-LZ2"/>
+                                </connections>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xpB-Hk-YkQ">
+                                <rect key="frame" x="0.0" y="108" width="600" height="492"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Dxl-mf-N4h">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uX9-gO-Pmr" id="0sM-cE-Hpz"/>
+                                    <outlet property="delegate" destination="uX9-gO-Pmr" id="V6A-Oq-IqN"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xpB-Hk-YkQ" firstAttribute="leading" secondItem="uOB-lS-jMh" secondAttribute="leading" id="G2o-sL-lrB"/>
+                            <constraint firstItem="bfT-rv-15q" firstAttribute="top" secondItem="KPI-of-ylL" secondAttribute="bottom" id="G3S-VG-0xM"/>
+                            <constraint firstAttribute="trailing" secondItem="bfT-rv-15q" secondAttribute="trailing" id="aV8-a3-AU7"/>
+                            <constraint firstItem="8hU-RP-z2z" firstAttribute="top" secondItem="xpB-Hk-YkQ" secondAttribute="bottom" id="hfX-k0-nBm"/>
+                            <constraint firstAttribute="trailing" secondItem="xpB-Hk-YkQ" secondAttribute="trailing" id="qVD-N1-YRT"/>
+                            <constraint firstItem="bfT-rv-15q" firstAttribute="leading" secondItem="uOB-lS-jMh" secondAttribute="leading" id="vij-IA-l7w"/>
+                            <constraint firstItem="xpB-Hk-YkQ" firstAttribute="top" secondItem="bfT-rv-15q" secondAttribute="bottom" id="w1Q-54-Ny0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="NPW-M5-rwa"/>
+                    <connections>
+                        <outlet property="collectionView" destination="xpB-Hk-YkQ" id="R7R-7d-RPb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R79-ki-2Hx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2554" y="337"/>
         </scene>
         <!--My Books Navigation Controller-->
         <scene sceneID="fb9-Lp-2gm">

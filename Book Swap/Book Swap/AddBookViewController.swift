@@ -1,15 +1,15 @@
 //
-//  MyBooksViewController.swift
+//  AddBookViewController.swift
 //  Book Swap
 //
-//  Created by Mateusz Tylman on 18/03/16.
+//  Created by Kamil Powałowski on 19.03.2016.
 //  Copyright © 2016 Book Swap Team. All rights reserved.
 //
 
 import UIKit
-import Haneke
+import Async
 
-class MyBooksViewController: BSViewController {
+class AddBookViewController: BSViewController {
 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
@@ -17,23 +17,15 @@ class MyBooksViewController: BSViewController {
         }
     }
     
-    private var bookViewModel = BookViewModel()
+    private let bookViewModel = BookViewModel()
+    
+    private var async: Async?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = L10n.LocTabMyBooks.string
-        automaticallyAdjustsScrollViewInsets = false
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")
 
-        bookViewModel.offeredBooks { (error) -> Void in
-            if error != nil {
-                //TODO: Handle error
-            } else {
-                self.collectionView.reloadData()
-            }
-        }
+        navigationItem.title = L10n.LocAddBookTitle.string
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelButton:")
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,8 +33,8 @@ class MyBooksViewController: BSViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func addNewBook(sender: UIBarButtonItem) {
-        performSegue(StoryboardSegue.MyBooks.PresentAddBookNavigationController)
+    func cancelButton(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*
@@ -54,10 +46,31 @@ class MyBooksViewController: BSViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }
 
-extension MyBooksViewController: UICollectionViewDataSource {
+extension AddBookViewController: UISearchBarDelegate {
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        async?.cancel()
+        async = Async.main(after: 5, block: { [weak self]() -> Void in
+            self?.searchBarSearchButtonClicked(searchBar)
+        })
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        async?.cancel()
+        searchBar.resignFirstResponder()
+        guard searchBar.text?.characters.count > 0 else { return }
+        bookViewModel.searchBook(searchBar.text!) { (error) -> Void in
+            if error != nil {
+                //TOOD: handle
+            } else {
+                self.collectionView.reloadData()
+            }
+        }
+    }
+}
+
+extension AddBookViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return bookViewModel.books?.count ?? 0
     }
@@ -74,11 +87,20 @@ extension MyBooksViewController: UICollectionViewDataSource {
     }
 }
 
-extension MyBooksViewController: UICollectionViewDelegate {
-    
+extension AddBookViewController: UICollectionViewDelegate {
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        bookViewModel.selectedBook = bookViewModel.books![indexPath.row]
+        bookViewModel.offerBook { (error) -> Void in
+            if error != nil {
+                //TOOD: handle
+            } else {
+                self.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
+    }
 }
 
-extension MyBooksViewController: UICollectionViewDelegateFlowLayout {
+extension AddBookViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let width = collectionView.frame.width / 2
         return CGSize(width: width - 14, height: width / 3 * 4)
@@ -92,3 +114,4 @@ extension MyBooksViewController: UICollectionViewDelegateFlowLayout {
         return 2
     }
 }
+
