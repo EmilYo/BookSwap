@@ -14,6 +14,7 @@ class BookTinderTabView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var ratingLabel: UILabel!
 
     required override init(frame: CGRect) {
         super.init(frame: frame)

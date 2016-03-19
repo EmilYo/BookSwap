@@ -11,7 +11,7 @@ import AFImageHelper
 
 class Appearance {
     static func configure() {
-//        UINavigationBar.appearance().tintColor = UIColor(named: .Second)
+        UINavigationBar.appearance().tintColor = UIColor(named: .TabBarIcon)
         UINavigationBar.appearance().setBackgroundImage(UIImage(color: UIColor(named: .MainColor).colorWithAlphaComponent(0.8)), forBarMetrics: .Default)
         UINavigationBar.appearance().titleTextAttributes = [
             NSForegroundColorAttributeName: UIColor(named: .TabBarSelectedText),

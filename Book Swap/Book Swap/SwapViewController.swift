@@ -26,14 +26,9 @@ class SwapViewController: BSViewController {
         configureBookKolodaView()
         
         navigationItem.title = L10n.LocTabSwap.string
-        
-        bookViewModel.nearbyBooks { (error) -> Void in
-            if error != nil {
-                
-            }
-            self.bookKolodaView.reloadData()
-        }
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "downloadNearbyBooks")
+
+        downloadNearbyBooks()
         // Do any additional setup after loading the view.
     }
     func configureBookKolodaView() {
@@ -50,6 +45,15 @@ class SwapViewController: BSViewController {
     }
     @IBAction func likeButtonAction(sender: AnyObject) {
         bookKolodaView?.swipe(SwipeResultDirection.Right)
+    }
+    
+    func downloadNearbyBooks() {
+        bookViewModel.nearbyBooks { (error) -> Void in
+            if error != nil {
+                
+            }
+            self.bookKolodaView.reloadData()
+        }
     }
 }
 
@@ -102,6 +106,9 @@ extension SwapViewController: KolodaViewDataSource {
             bookTinderTabView?.bookImageView.hnk_setImageFromURL(book.cover)
             bookTinderTabView?.titleLabel.text = book.title
             bookTinderTabView?.authorLabel.text = book.author
+            if let rating = book.rating {
+                bookTinderTabView?.ratingLabel.text = "\(Int(rating.toDouble()))/10"
+            }
         }
         bookTinderTabView?.layer.cornerRadius = 5
         
