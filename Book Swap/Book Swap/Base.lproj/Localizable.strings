@@ -5,5 +5,10 @@
 "loc_tab_profile" = "Profile";
 
 "loc_login_title" = "Login";
-"loc_add_book_title" = "Add book";
 "loc_login_label" = "Wymieniaj książki z ludźmi z twoje okolicy.";
+"loc_trash_book_message" = "Czy napewno chcesz usunąć tą książkę?";
+"loc_add_book_title" = "Add book";
+
+"loc_warning" = "Uwaga!";
+"loc_yes" = "Tak";
+"loc_no" = "Nie";

@@ -15,10 +15,18 @@ enum L10n {
   case LocTabProfile
   /// Login
   case LocLoginTitle
-  /// Add book
-  case LocAddBookTitle
   /// Wymieniaj książki z ludźmi z twoje okolicy.
   case LocLoginLabel
+  /// Czy napewno chcesz usunąć tą książkę?
+  case LocTrashBookMessage
+  /// Add book
+  case LocAddBookTitle
+  /// Uwaga!
+  case LocWarning
+  /// Tak
+  case LocYes
+  /// Nie
+  case LocNo
 }
 
 extension L10n: CustomStringConvertible {
@@ -38,10 +46,18 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_tab_profile")
       case .LocLoginTitle:
         return L10n.tr("loc_login_title")
-      case .LocAddBookTitle:
-        return L10n.tr("loc_add_book_title")
       case .LocLoginLabel:
         return L10n.tr("loc_login_label")
+      case .LocTrashBookMessage:
+        return L10n.tr("loc_trash_book_message")
+      case .LocAddBookTitle:
+        return L10n.tr("loc_add_book_title")
+      case .LocWarning:
+        return L10n.tr("loc_warning")
+      case .LocYes:
+        return L10n.tr("loc_yes")
+      case .LocNo:
+        return L10n.tr("loc_no")
     }
   }
 

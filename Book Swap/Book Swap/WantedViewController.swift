@@ -21,6 +21,7 @@ class WantedViewController: BSViewController {
         super.viewDidLoad()
 
         navigationItem.title = L10n.LocTabWanted.string
+        automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewWillAppear(animated: Bool) {
