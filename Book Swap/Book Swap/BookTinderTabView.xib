@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,32 +18,59 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jDH-55-8N7">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         </imageView>
-                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-D3-Aam">
-                            <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vRn-D3-Aam" customClass="GradientView" customModule="Book_Swap" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="333" width="375" height="333.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPO-XY-cYr">
-                                    <rect key="frame" x="15" y="15" width="345" height="26.5"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titile" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPO-XY-cYr">
+                                    <rect key="frame" x="15" y="248.5" width="345" height="33.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnW-CH-YJo">
-                                    <rect key="frame" x="15" y="46.5" width="345" height="21.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Autor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnW-CH-YJo">
+                                    <rect key="frame" x="15" y="287" width="295" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozX-e8-tf4">
+                                    <rect key="frame" x="310" y="288" width="50" height="24"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.65000000000000002" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstItem="gnW-CH-YJo" firstAttribute="leading" secondItem="QPO-XY-cYr" secondAttribute="leading" id="0Hj-7E-2Oy"/>
+                                <constraint firstItem="ozX-e8-tf4" firstAttribute="trailing" secondItem="QPO-XY-cYr" secondAttribute="trailing" id="EhE-zz-3YN"/>
+                                <constraint firstAttribute="bottom" secondItem="gnW-CH-YJo" secondAttribute="bottom" constant="20" id="MBq-gc-fLA"/>
                                 <constraint firstItem="gnW-CH-YJo" firstAttribute="trailing" secondItem="QPO-XY-cYr" secondAttribute="trailing" id="Ono-Rm-wsH"/>
                                 <constraint firstItem="gnW-CH-YJo" firstAttribute="leading" secondItem="QPO-XY-cYr" secondAttribute="leading" id="Ute-Hz-kgq"/>
+                                <constraint firstItem="ozX-e8-tf4" firstAttribute="centerY" secondItem="gnW-CH-YJo" secondAttribute="centerY" id="m6D-Gc-CiY"/>
                                 <constraint firstAttribute="trailing" secondItem="QPO-XY-cYr" secondAttribute="trailing" constant="15" id="mbu-RQ-rli"/>
-                                <constraint firstAttribute="height" constant="100" id="mrl-ME-Dpp"/>
+                                <constraint firstAttribute="height" constant="200" id="mrl-ME-Dpp"/>
                                 <constraint firstItem="QPO-XY-cYr" firstAttribute="leading" secondItem="vRn-D3-Aam" secondAttribute="leading" constant="15" id="ntG-bk-q2A"/>
                                 <constraint firstItem="gnW-CH-YJo" firstAttribute="top" secondItem="QPO-XY-cYr" secondAttribute="bottom" constant="5" id="tPh-Y6-tAI"/>
-                                <constraint firstItem="QPO-XY-cYr" firstAttribute="top" secondItem="vRn-D3-Aam" secondAttribute="top" constant="15" id="w7D-gJ-b2c"/>
+                                <constraint firstItem="ozX-e8-tf4" firstAttribute="leading" secondItem="gnW-CH-YJo" secondAttribute="trailing" id="uPL-2u-cEE"/>
+                                <constraint firstItem="QPO-XY-cYr" firstAttribute="top" secondItem="vRn-D3-Aam" secondAttribute="top" constant="250" id="w7D-gJ-b2c"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="mrl-ME-Dpp"/>
+                                    <exclude reference="w7D-gJ-b2c"/>
+                                    <exclude reference="Ono-Rm-wsH"/>
+                                    <exclude reference="Ute-Hz-kgq"/>
+                                </mask>
+                            </variation>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -53,6 +81,7 @@
                         <constraint firstItem="jDH-55-8N7" firstAttribute="top" secondItem="SNP-Kj-aHe" secondAttribute="top" id="N1R-Ok-j4d"/>
                         <constraint firstAttribute="trailing" secondItem="jDH-55-8N7" secondAttribute="trailing" id="U1O-hN-ncc"/>
                         <constraint firstAttribute="bottom" secondItem="jDH-55-8N7" secondAttribute="bottom" id="U4S-Av-MvN"/>
+                        <constraint firstItem="vRn-D3-Aam" firstAttribute="height" secondItem="SNP-Kj-aHe" secondAttribute="height" multiplier="1/2" id="YYZ-qp-YXM"/>
                         <constraint firstAttribute="bottom" secondItem="vRn-D3-Aam" secondAttribute="bottom" id="zhh-ZF-KyC"/>
                     </constraints>
                 </view>
@@ -69,6 +98,7 @@
                 <outlet property="authorLabel" destination="gnW-CH-YJo" id="G8H-gJ-aVB"/>
                 <outlet property="bookImageView" destination="jDH-55-8N7" id="fTB-fa-svj"/>
                 <outlet property="containerView" destination="SNP-Kj-aHe" id="g5f-GO-fRH"/>
+                <outlet property="ratingLabel" destination="ozX-e8-tf4" id="qCA-sO-7Zg"/>
                 <outlet property="titleLabel" destination="QPO-XY-cYr" id="kmD-fC-a6Z"/>
             </connections>
             <point key="canvasLocation" x="90.5" y="155.5"/>

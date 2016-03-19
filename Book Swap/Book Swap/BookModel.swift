@@ -22,7 +22,7 @@ struct BookModel: Decodable {
             return NSURL(string: "http://ext2.lubimyczytac.pl/book/\(bookId!)/image?request=%7B%22width%22:%22500%22,%22height%22:%22600%22%7D")!
         }
     }
-    var rating: Float?
+    var rating: String?
     
     init?(json: JSON) {
         bookId = "id" <~~ json

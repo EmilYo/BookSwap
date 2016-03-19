@@ -59,6 +59,7 @@
 		E25DE6BE1C9C8E6700EEDCD4 /* BookTinderTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6BD1C9C8E6700EEDCD4 /* BookTinderTabView.swift */; };
 		E25DE6C01C9C8E7700EEDCD4 /* BookTinderTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */; };
 		E25DE6C21C9CA7FF00EEDCD4 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6C11C9CA7FF00EEDCD4 /* Appearance.swift */; };
+		E25DE6C41C9CD6CA00EEDCD4 /* String+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6C31C9CD6CA00EEDCD4 /* String+Double.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		E25DE6BD1C9C8E6700EEDCD4 /* BookTinderTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTinderTabView.swift; sourceTree = "<group>"; };
 		E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTinderTabView.xib; sourceTree = "<group>"; };
 		E25DE6C11C9CA7FF00EEDCD4 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		E25DE6C31C9CD6CA00EEDCD4 /* String+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Double.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				8E31672F1C9CAA23001A20E6 /* UIView+Identifier.swift */,
+				E25DE6C31C9CD6CA00EEDCD4 /* String+Double.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				8EDC2E4D1C9CD14E009E643B /* AddBookViewController.swift in Sources */,
 				E25DE6A31C9C749400EEDCD4 /* SwapViewController.swift in Sources */,
 				E25DE68D1C9C72F600EEDCD4 /* BSNavigationController.swift in Sources */,
+				E25DE6C41C9CD6CA00EEDCD4 /* String+Double.swift in Sources */,
 				E25DE6981C9C73B100EEDCD4 /* WantedNavigationController.swift in Sources */,
 				8E3167261C9C972F001A20E6 /* BookViewModel.swift in Sources */,
 				E25DE6BE1C9C8E6700EEDCD4 /* BookTinderTabView.swift in Sources */,

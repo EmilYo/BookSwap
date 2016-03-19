@@ -26,14 +26,9 @@ class SwapViewController: BSViewController {
         configureBookKolodaView()
         
         navigationItem.title = L10n.LocTabSwap.string
-        
-        bookViewModel.nearbyBooks { (error) -> Void in
-            if error != nil {
-                
-            }
-            self.bookKolodaView.reloadData()
-        }
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "downloadNearbyBooks")
+
+        downloadNearbyBooks()
         // Do any additional setup after loading the view.
     }
     func configureBookKolodaView() {
@@ -51,13 +46,22 @@ class SwapViewController: BSViewController {
     @IBAction func likeButtonAction(sender: AnyObject) {
         bookKolodaView?.swipe(SwipeResultDirection.Right)
     }
+    
+    func downloadNearbyBooks() {
+        bookViewModel.nearbyBooks { (error) -> Void in
+            if error != nil {
+                
+            }
+            self.bookKolodaView.resetCurrentCardNumber()
+        }
+    }
 }
 
 //MARK: KolodaViewDelegate
 extension SwapViewController: KolodaViewDelegate {
     func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
         //Example: reloading
-        bookKolodaView.resetCurrentCardNumber()
+        downloadNearbyBooks()
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
@@ -84,6 +88,17 @@ extension SwapViewController: KolodaViewDelegate {
         animation.springSpeed = frameAnimationSpringSpeed
         return animation
     }
+    
+    func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
+        if direction == .Right {
+            bookViewModel.selectedBook = bookViewModel.books![Int(index)]
+            bookViewModel.wantBook { (error) -> Void in
+                if (error != nil) {
+                    
+                }
+            }
+        }
+    }
 }
 
 //MARK: KolodaViewDataSource
@@ -102,6 +117,9 @@ extension SwapViewController: KolodaViewDataSource {
             bookTinderTabView?.bookImageView.hnk_setImageFromURL(book.cover)
             bookTinderTabView?.titleLabel.text = book.title
             bookTinderTabView?.authorLabel.text = book.author
+            if let rating = book.rating {
+                bookTinderTabView?.ratingLabel.text = "\(Int(rating.toDouble()))/10"
+            }
         }
         bookTinderTabView?.layer.cornerRadius = 5
         
