@@ -78,8 +78,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         alertController.addAction(cancelAction)
         let yesAction = UIAlertAction(title: L10n.LocYes.string, style: .Default) { (UIAlertAction) -> Void in
             if let mainTabBarViewController = self.window?.rootViewController as? MainTabBarViewController {
+                let currentIndex : Int? = mainTabBarViewController.selectedIndex
                 mainTabBarViewController.selectedIndex = 3
-                mainTabBarViewController.setSelectIndex(from: 0, to: 3)
+                mainTabBarViewController.setSelectIndex(from: currentIndex!, to: 3)
+                
             }
         }
         alertController.addAction(yesAction)
