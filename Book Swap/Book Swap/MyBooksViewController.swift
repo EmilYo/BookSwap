@@ -49,6 +49,9 @@ class MyBooksViewController: BSViewController {
             if error != nil {
                 //TODO: Handle error
             } else {
+                if (self.bookViewModel.books?.count > 0) {
+                    self.hideEmptyView()
+                }
                 self.collectionView.reloadData()
             }
         }
@@ -68,7 +71,7 @@ class MyBooksViewController: BSViewController {
     }
     */
     
-    func reset(sender: UISwipeGestureRecognizer) {
+    func trash(sender: UISwipeGestureRecognizer) {
         if let cell = sender.view as? UICollectionViewCell {
             let i = collectionView.indexPathForCell(cell)!.item
             bookViewModel.selectedBook = bookViewModel.books![i]
@@ -100,6 +103,11 @@ class MyBooksViewController: BSViewController {
 
 extension MyBooksViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let books = bookViewModel.books {
+            if books.count == 0 {
+                showEmptyView(L10n.LocMyBooksEmpty.string)
+            }
+        }
         return bookViewModel.books?.count ?? 0
     }
     
@@ -111,7 +119,7 @@ extension MyBooksViewController: UICollectionViewDataSource {
         cell?.titleLabel.text = book?.title
         cell?.authorLabel.text = book?.author
     
-        let UpSwipe = UISwipeGestureRecognizer(target: self, action: "reset:")
+        let UpSwipe = UISwipeGestureRecognizer(target: self, action: "trash:")
         UpSwipe.direction = UISwipeGestureRecognizerDirection.Left
         cell?.addGestureRecognizer(UpSwipe)
         

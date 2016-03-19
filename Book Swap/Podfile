@@ -18,6 +18,8 @@ pod 'HanekeSwift', '~> 0.10'
 pod 'RAMAnimatedTabBarController', '~> 1.2.2'
 pod 'Koloda', '~> 2.0'
 pod 'AFImageHelper', '~> 3.0'
+pod 'PKHUD', '~> 3.1'
+
 
 post_install do |installer|
     `find Pods -regex 'Pods/pop.*\\.h' -print0 | xargs -0 sed -i '' 's/\\(<\\)pop\\/\\(.*\\)\\(>\\)/\\"\\2\\"/'`

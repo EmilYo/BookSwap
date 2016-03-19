@@ -3,30 +3,36 @@
 import Foundation
 
 enum L10n {
-  /// My Books
+  /// Mam
   case LocTabMyBooks
-  /// Wanted
+  /// Chce
   case LocTabWanted
-  /// Swap
+  /// Odkryj
   case LocTabSwap
-  /// Match
+  /// Wymiany
   case LocTabMatch
-  /// Profile
+  /// Profil
   case LocTabProfile
   /// Login
   case LocLoginTitle
-  /// Wymieniaj książki z ludźmi z twoje okolicy.
-  case LocLoginLabel
-  /// Czy napewno chcesz usunąć tą książkę?
-  case LocTrashBookMessage
   /// Add book
   case LocAddBookTitle
+  /// Wymieniaj książki z ludźmi z twoje okolicy.
+  case LocLoginLabel
   /// Uwaga!
   case LocWarning
   /// Tak
   case LocYes
   /// Nie
   case LocNo
+  /// Czy napewno chcesz usunąć tą książkę?
+  case LocTrashBookMessage
+  /// Dodaj książki
+  case LocMyBooksEmpty
+  /// Znajdź interesujące Cię książki
+  case LocWantedEmpty
+  /// Brak ksiązek w okolicy
+  case LocSwapEmpty
 }
 
 extension L10n: CustomStringConvertible {
@@ -46,18 +52,24 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_tab_profile")
       case .LocLoginTitle:
         return L10n.tr("loc_login_title")
-      case .LocLoginLabel:
-        return L10n.tr("loc_login_label")
-      case .LocTrashBookMessage:
-        return L10n.tr("loc_trash_book_message")
       case .LocAddBookTitle:
         return L10n.tr("loc_add_book_title")
+      case .LocLoginLabel:
+        return L10n.tr("loc_login_label")
       case .LocWarning:
         return L10n.tr("loc_warning")
       case .LocYes:
         return L10n.tr("loc_yes")
       case .LocNo:
         return L10n.tr("loc_no")
+      case .LocTrashBookMessage:
+        return L10n.tr("loc_trash_book_message")
+      case .LocMyBooksEmpty:
+        return L10n.tr("loc_my_books_empty")
+      case .LocWantedEmpty:
+        return L10n.tr("loc_wanted_empty")
+      case .LocSwapEmpty:
+        return L10n.tr("loc_swap_empty")
     }
   }
 

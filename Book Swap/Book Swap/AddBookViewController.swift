@@ -8,6 +8,7 @@
 
 import UIKit
 import Async
+import PKHUD
 
 class AddBookViewController: BSViewController {
 
@@ -50,7 +51,9 @@ extension AddBookViewController: UISearchBarDelegate {
         async?.cancel()
         searchBar.resignFirstResponder()
         guard searchBar.text?.characters.count > 0 else { return }
+        HUD.show(.Progress)
         bookViewModel.searchBook(searchBar.text!) { (error) -> Void in
+            HUD.hide()
             if error != nil {
                 //TOOD: handle
             } else {
