@@ -6,3 +6,8 @@
 
 "loc_login_title" = "Login";
 "loc_add_book_title" = "Add book";
+
+"loc_warning" = "Uwaga!";
+"loc_yes" = "Tak";
+"loc_no" = "Nie";
+"loc_trash_book_message" = "Czy napewno chcesz usunąć tą książkę?";

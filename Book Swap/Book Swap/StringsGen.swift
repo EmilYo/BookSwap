@@ -17,6 +17,14 @@ enum L10n {
   case LocLoginTitle
   /// Add book
   case LocAddBookTitle
+  /// Warning!
+  case LocWarning
+  /// Tak
+  case LocYes
+  /// Nie
+  case LocNo
+  /// Czy napewno chcesz usunąć tą książkę?
+  case LocTrashBookMessage
 }
 
 extension L10n: CustomStringConvertible {
@@ -38,6 +46,14 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_login_title")
       case .LocAddBookTitle:
         return L10n.tr("loc_add_book_title")
+      case .LocWarning:
+        return L10n.tr("loc_warning")
+      case .LocYes:
+        return L10n.tr("loc_yes")
+      case .LocNo:
+        return L10n.tr("loc_no")
+      case .LocTrashBookMessage:
+        return L10n.tr("loc_trash_book_message")
     }
   }
 

@@ -50,6 +50,20 @@ class BookViewModel {
         }
     }
     
+    func trashBook(completion: (error: NSError?) -> Void) {
+        guard selectedBook != nil else {
+            return completion(error: ErrorHelper.error)
+        }
+        
+        NetworkHelper.authorizedRequest(.DELETE, endpoint: offerEndpoint + "\(selectedBook!.bookId!)", parameters: nil) { (response) -> Void in
+            if response.result.error != nil {
+                completion(error: response.result.error)
+            } else {
+                completion(error: nil)
+            }
+        }
+    }
+    
     func wantBook(completion: (error: NSError?) -> Void) {
         guard selectedBook != nil else {
             return completion(error: ErrorHelper.error)

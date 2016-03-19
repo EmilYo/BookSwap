@@ -27,6 +27,8 @@ class SwapViewController: BSViewController {
         
         navigationItem.title = L10n.LocTabSwap.string
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "downloadNearbyBooks")
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedNotifications:", name: Constans.NotificationKey.UserLogged.rawValue, object: nil)
 
         downloadNearbyBooks()
         // Do any additional setup after loading the view.
@@ -57,6 +59,10 @@ class SwapViewController: BSViewController {
             }
             self.bookKolodaView.resetCurrentCardNumber()
         }
+    }
+    
+    func receivedNotifications(notification: NSNotification) {
+        downloadNearbyBooks()
     }
 }
 
