@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import ASValueTrackingSlider
 
 class ProfileViewController: BSViewController {
 
@@ -21,6 +22,17 @@ class ProfileViewController: BSViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    @IBOutlet weak var slider: ASValueTrackingSlider! {
+        didSet {
+            slider.tintColor = UIColor(named: .NavBarTint)
+            slider.minimumValue = 1
+            slider.maximumValue = 50
+            slider.value = 5
+            slider.continuous = false
+            slider.numberFormatter = NSNumberFormatter()
+            slider.numberFormatter.allowsFloats = false
+        }
+    }
     private var userViewModel = UserViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()

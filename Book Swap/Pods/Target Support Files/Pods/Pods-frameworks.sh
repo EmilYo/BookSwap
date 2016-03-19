@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AFImageHelper.framework"
+  install_framework "Pods/ASValueTrackingSlider.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/Async.framework"
   install_framework "Pods/Bolts.framework"
@@ -103,6 +104,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AFImageHelper.framework"
+  install_framework "Pods/ASValueTrackingSlider.framework"
   install_framework "Pods/Alamofire.framework"
   install_framework "Pods/Async.framework"
   install_framework "Pods/Bolts.framework"

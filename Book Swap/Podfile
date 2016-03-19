@@ -19,6 +19,7 @@ pod 'RAMAnimatedTabBarController', '~> 1.2.2'
 pod 'Koloda', '~> 2.0'
 pod 'AFImageHelper', '~> 3.0'
 pod 'PKHUD', '~> 3.1'
+pod 'ASValueTrackingSlider', '~> 0.11'
 
 
 post_install do |installer|
