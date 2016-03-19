@@ -13,14 +13,14 @@ struct UserModel: Decodable {
     var userId: String?
     var firstName: String?
     var lastName: String?
-    var avatar: String?
+    var avatar: NSURL?
     var email: String?
     
     init?(json: JSON) {
         userId = "id" <~~ json
         firstName = "first_name" <~~ json
         lastName = "last_name" <~~ json
-        avatar = "avatar" <~~ json
+        avatar = NSURL(string: ("avatar" <~~ json)!)
         email = "email" <~~ json
     }
 }

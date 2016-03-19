@@ -32,7 +32,7 @@ class UserViewModel {
     }
     
     func getMe(completion: (error: NSError?) -> Void) {
-        NetworkHelper.authorizedRequest(.GET, endpoint: userEndPoint + "1", parameters: nil) { (response) -> Void in
+        NetworkHelper.authorizedRequest(.GET, endpoint: userEndPoint, parameters: nil) { (response) -> Void in
             if response.result.error != nil {
                 completion(error: response.result.error)
             } else {
