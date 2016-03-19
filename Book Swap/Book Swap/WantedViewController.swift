@@ -39,7 +39,38 @@ class WantedViewController: BSViewController {
             if error != nil {
                 //TODO: Handle error
             } else {
+                if (self.bookViewModel.books?.count > 0) {
+                    self.hideEmptyView()
+                }
                 self.collectionView.reloadData()
+            }
+        }
+    }
+    
+    func trash(sender: UISwipeGestureRecognizer) {
+        if let cell = sender.view as? UICollectionViewCell {
+            let i = collectionView.indexPathForCell(cell)!.item
+            bookViewModel.selectedBook = bookViewModel.books![i]
+        }
+        
+        let alertController = UIAlertController(title: L10n.LocWarning.string, message: L10n.LocTrashBookMessage.string, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: L10n.LocNo.string, style: .Cancel) { (UIAlertAction) -> Void in
+            
+        }
+        alertController.addAction(cancelAction)
+        let yesAction = UIAlertAction(title: L10n.LocYes.string, style: .Destructive) { (UIAlertAction) -> Void in
+            self.removeSelectedBook()
+        }
+        alertController.addAction(yesAction)
+        presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    func removeSelectedBook() {
+        bookViewModel.trashWantBook { (error) -> Void in
+            if error != nil {
+                //TODO: Handle error
+            } else {
+                self.loadData()
             }
         }
     }
@@ -58,6 +89,11 @@ class WantedViewController: BSViewController {
 
 extension WantedViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let books = bookViewModel.books {
+            if books.count == 0 {
+                showEmptyView(L10n.LocWantedEmpty.string)
+            }
+        }
         return bookViewModel.books?.count ?? 0
     }
     
@@ -68,6 +104,10 @@ extension WantedViewController: UICollectionViewDataSource {
         cell?.imageView.hnk_setImageFromURL(book!.cover)
         cell?.titleLabel.text = book?.title
         cell?.authorLabel.text = book?.author
+        
+        let UpSwipe = UISwipeGestureRecognizer(target: self, action: "trash:")
+        UpSwipe.direction = UISwipeGestureRecognizerDirection.Left
+        cell?.addGestureRecognizer(UpSwipe)
         
         return cell!
     }

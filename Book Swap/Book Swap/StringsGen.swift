@@ -29,6 +29,8 @@ enum L10n {
   case LocTrashBookMessage
   /// Dodaj książki
   case LocMyBooksEmpty
+  /// Znajdź interesujące Cię książki
+  case LocWantedEmpty
   /// Brak ksiązek w okolicy
   case LocSwapEmpty
 }
@@ -64,6 +66,8 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_trash_book_message")
       case .LocMyBooksEmpty:
         return L10n.tr("loc_my_books_empty")
+      case .LocWantedEmpty:
+        return L10n.tr("loc_wanted_empty")
       case .LocSwapEmpty:
         return L10n.tr("loc_swap_empty")
     }

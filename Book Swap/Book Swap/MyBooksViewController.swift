@@ -71,7 +71,7 @@ class MyBooksViewController: BSViewController {
     }
     */
     
-    func reset(sender: UISwipeGestureRecognizer) {
+    func trash(sender: UISwipeGestureRecognizer) {
         if let cell = sender.view as? UICollectionViewCell {
             let i = collectionView.indexPathForCell(cell)!.item
             bookViewModel.selectedBook = bookViewModel.books![i]
@@ -119,7 +119,7 @@ extension MyBooksViewController: UICollectionViewDataSource {
         cell?.titleLabel.text = book?.title
         cell?.authorLabel.text = book?.author
     
-        let UpSwipe = UISwipeGestureRecognizer(target: self, action: "reset:")
+        let UpSwipe = UISwipeGestureRecognizer(target: self, action: "trash:")
         UpSwipe.direction = UISwipeGestureRecognizerDirection.Left
         cell?.addGestureRecognizer(UpSwipe)
         
