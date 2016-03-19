@@ -42,10 +42,10 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BookSwap" translatesAutoresizingMaskIntoConstraints="NO" id="7Sf-eu-n5S">
-                                <rect key="frame" x="215" y="94" width="170" height="170"/>
+                                <rect key="frame" x="212.5" y="94" width="175" height="168"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Wymieniaj książki z ludźmi z twoje okolicy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-CH-igL">
-                                <rect key="frame" x="20" y="304" width="560" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" text="Wymieniaj książki z ludźmi w okolicy." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPw-CH-igL">
+                                <rect key="frame" x="20" y="302" width="560" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -76,6 +76,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="BookSwap" width="170" height="170"/>
+        <image name="BookSwap" width="175" height="168"/>
     </resources>
 </document>
