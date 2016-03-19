@@ -11,6 +11,7 @@ import UIKit
 class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var rightImageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

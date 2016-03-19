@@ -5,14 +5,24 @@ import Foundation
 enum L10n {
   /// Mam
   case LocTabMyBooks
-  /// Chce
+  /// Moje książki
+  case LocMyBooksTitle
+  /// Chcę
   case LocTabWanted
+  /// Chcę książki
+  case LocWantedTitle
   /// Odkryj
   case LocTabSwap
+  /// Odkryj
+  case LocSwapTitle
   /// Wymiany
   case LocTabMatch
+  /// Wymiany
+  case LocMatchTitle
   /// Profil
   case LocTabProfile
+  /// Profil
+  case LocProfileTitle
   /// Login
   case LocLoginTitle
   /// Add book
@@ -33,6 +43,8 @@ enum L10n {
   case LocWantedEmpty
   /// Brak ksiązek w okolicy
   case LocSwapEmpty
+  /// Możliwa wymiana \"%@\" za \"%@\" z użytkownikiem %@.
+  case LocMatchLabel(String, String, String)
 }
 
 extension L10n: CustomStringConvertible {
@@ -42,14 +54,24 @@ extension L10n: CustomStringConvertible {
     switch self {
       case .LocTabMyBooks:
         return L10n.tr("loc_tab_my_books")
+      case .LocMyBooksTitle:
+        return L10n.tr("loc_my_books_title")
       case .LocTabWanted:
         return L10n.tr("loc_tab_wanted")
+      case .LocWantedTitle:
+        return L10n.tr("loc_wanted_title")
       case .LocTabSwap:
         return L10n.tr("loc_tab_swap")
+      case .LocSwapTitle:
+        return L10n.tr("loc_swap_title")
       case .LocTabMatch:
         return L10n.tr("loc_tab_match")
+      case .LocMatchTitle:
+        return L10n.tr("loc_match_title")
       case .LocTabProfile:
         return L10n.tr("loc_tab_profile")
+      case .LocProfileTitle:
+        return L10n.tr("loc_profile_title")
       case .LocLoginTitle:
         return L10n.tr("loc_login_title")
       case .LocAddBookTitle:
@@ -70,6 +92,8 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_wanted_empty")
       case .LocSwapEmpty:
         return L10n.tr("loc_swap_empty")
+      case .LocMatchLabel(let p0, let p1, let p2):
+        return L10n.tr("loc_match_label", p0, p1, p2)
     }
   }
 

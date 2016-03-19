@@ -12,6 +12,7 @@ class MatchViewController: BSViewController {
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.registerNib(UINib(nibName: MatchTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: MatchTableViewCell.identifier)
+            tableView.tableFooterView = UIView()
         }
     }
 
@@ -20,7 +21,7 @@ class MatchViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = L10n.LocTabMatch.string
+        navigationItem.title = L10n.LocMatchTitle.string
         automaticallyAdjustsScrollViewInsets = false
     }
     
@@ -63,6 +64,8 @@ extension MatchViewController: UITableViewDataSource {
         if let otherBookUrl = match.bookYouWant?.cover {
             cell?.rightImageView.hnk_setImageFromURL(otherBookUrl)
         }
+        
+        cell?.label.text = L10n.LocMatchLabel(match.bookHeWants!.title!, match.bookYouWant!.title!, "\(match.user!.firstName!) \(match.user!.lastName!)").string;
 
         return cell!
     }

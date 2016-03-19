@@ -25,8 +25,9 @@ class ProfileViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = L10n.LocTabProfile.string
-        avatarImageView.layer.cornerRadius = 40;
+        navigationItem.title = L10n.LocProfileTitle.string
+        
+        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -47,10 +48,6 @@ class ProfileViewController: BSViewController {
         if let me = userViewModel.me {
             nameLabel.text = "\(me.firstName!) \(me.lastName!)"
             emailLabel.text = me.email!
-            if let url = me.avatar {
-                avatarImageView.hnk_setImageFromURL(url)
-            }
-
         }
     }
 

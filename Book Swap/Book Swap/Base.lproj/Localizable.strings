@@ -1,11 +1,16 @@
 "loc_tab_my_books" = "Mam";
-"loc_tab_wanted" = "Chce";
+"loc_my_books_title" = "Moje książki";
+"loc_tab_wanted" = "Chcę";
+"loc_wanted_title" = "Chcę książki";
 "loc_tab_swap" = "Odkryj";
+"loc_swap_title" = "Odkryj";
 "loc_tab_match" = "Wymiany";
+"loc_match_title" = "Wymiany";
 "loc_tab_profile" = "Profil";
+"loc_profile_title" = "Profil";
 
 "loc_login_title" = "Login";
-"loc_add_book_title" = "Add book";
+"loc_add_book_title" = "Dodaj książkę";
 "loc_login_label" = "Wymieniaj książki z ludźmi z twoje okolicy.";
 
 "loc_warning" = "Uwaga!";
@@ -16,3 +21,5 @@
 "loc_my_books_empty" = "Dodaj książki";
 "loc_wanted_empty" = "Znajdź interesujące Cię książki";
 "loc_swap_empty" = "Brak ksiązek w okolicy";
+
+"loc_match_label" = "Możliwa wymiana \"%@\" za \"%@\" z użytkownikiem %@.";

@@ -22,7 +22,7 @@ class MyBooksViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = L10n.LocTabMyBooks.string
+        navigationItem.title = L10n.LocMyBooksTitle.string
         automaticallyAdjustsScrollViewInsets = false
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "addNewBook:")

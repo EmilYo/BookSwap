@@ -20,7 +20,7 @@ class WantedViewController: BSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationItem.title = L10n.LocTabWanted.string
+        navigationItem.title = L10n.LocWantedTitle.string
         automaticallyAdjustsScrollViewInsets = false
     }
     
