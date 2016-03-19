@@ -29,8 +29,8 @@ class ProfileViewController: BSViewController {
             slider.maximumValue = 50
             slider.value = 5
             slider.continuous = false
-            slider.numberFormatter = NSNumberFormatter()
-            slider.numberFormatter.allowsFloats = false
+            slider.dataSource = self
+            slider.popUpViewColor = UIColor(named: .NavBarTint)
         }
     }
     private var userViewModel = UserViewModel()
@@ -95,6 +95,14 @@ extension ProfileViewController: FBSDKLoginButtonDelegate {
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         loginButtonDidLogOut(loginButton)
+    }
+}
+
+extension ProfileViewController: ASValueTrackingSliderDataSource {
+    func slider(slider: ASValueTrackingSlider!, stringForValue value: Float) -> String! {
+        let formmater = NSNumberFormatter()
+        formmater.allowsFloats = false
+        return "\(formmater.stringFromNumber(value)!) km"
     }
 }
 
