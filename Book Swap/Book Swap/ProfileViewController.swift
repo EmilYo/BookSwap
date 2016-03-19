@@ -17,12 +17,36 @@ class ProfileViewController: BSViewController {
             logoutButton.delegate = self
         }
     }
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    
+    private var userViewModel = UserViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = L10n.LocTabProfile.string
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        getMe()
+    }
+    
+    func getMe() {
+        userViewModel.getMe { (error) -> Void in
+            if error != nil {
+                
+            } else {
+                self.prepareProfile()
+            }
+        }
+    }
+    func prepareProfile() {
+        if let me = userViewModel.me {
+            nameLabel.text = "\(me.firstName!) \(me.lastName!)"
+            emailLabel.text = me.email!
+        }
     }
 
     override func didReceiveMemoryWarning() {

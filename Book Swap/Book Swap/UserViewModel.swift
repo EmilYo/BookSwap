@@ -11,6 +11,9 @@ import Gloss
 
 class UserViewModel {
     private let loginEndpoint = "/user/facebook"
+    private let userEndPoint = "/user/profile/"
+    
+    var me: UserModel?
     
     func loginUser(completion: (error: NSError?) -> Void) {
         
@@ -24,6 +27,22 @@ class UserViewModel {
                 completion(error: response.result.error)
             } else {
                 completion(error: nil)
+            }
+        }
+    }
+    
+    func getMe(completion: (error: NSError?) -> Void) {
+        NetworkHelper.authorizedRequest(.GET, endpoint: userEndPoint + "1", parameters: nil) { (response) -> Void in
+            if response.result.error != nil {
+                completion(error: response.result.error)
+            } else {
+                if let json = response.result.value as? JSON {
+                    self.me = UserModel(json: json)
+                    completion(error: nil)
+                } else {
+                    completion(error: ErrorHelper.error)
+                }
+
             }
         }
     }
