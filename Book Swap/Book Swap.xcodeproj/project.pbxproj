@@ -62,6 +62,7 @@
 		E25DE6C01C9C8E7700EEDCD4 /* BookTinderTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */; };
 		E25DE6C21C9CA7FF00EEDCD4 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6C11C9CA7FF00EEDCD4 /* Appearance.swift */; };
 		E25DE6C41C9CD6CA00EEDCD4 /* String+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6C31C9CD6CA00EEDCD4 /* String+Double.swift */; };
+		E25DE6C61C9CDC4B00EEDCD4 /* EmptyBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DE6C51C9CDC4B00EEDCD4 /* EmptyBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		E25DE6BF1C9C8E7700EEDCD4 /* BookTinderTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookTinderTabView.xib; sourceTree = "<group>"; };
 		E25DE6C11C9CA7FF00EEDCD4 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		E25DE6C31C9CD6CA00EEDCD4 /* String+Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Double.swift"; sourceTree = "<group>"; };
+		E25DE6C51C9CDC4B00EEDCD4 /* EmptyBookView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9860081C9CC83700E9B4F4 /* GradientView.swift */,
+				E25DE6C51C9CDC4B00EEDCD4 /* EmptyBookView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				E25DE6A51C9C74A600EEDCD4 /* SwapNavigationController.swift in Sources */,
 				8E3167281C9C9C4D001A20E6 /* ErrorHelper.swift in Sources */,
 				8E3167101C9C7A60001A20E6 /* LoginNavigationController.swift in Sources */,
+				E25DE6C61C9CDC4B00EEDCD4 /* EmptyBookView.swift in Sources */,
 				8E12B2E71C9C77A700CD574F /* ImagesGen.swift in Sources */,
 				8E12B2E91C9C77A700CD574F /* StringsGen.swift in Sources */,
 				8EDC2E4F1C9CE3C0009E643B /* MatchModel.swift in Sources */,
