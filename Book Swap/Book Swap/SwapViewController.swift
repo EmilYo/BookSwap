@@ -52,7 +52,7 @@ class SwapViewController: BSViewController {
             if error != nil {
                 
             }
-            self.bookKolodaView.reloadData()
+            self.bookKolodaView.resetCurrentCardNumber()
         }
     }
 }
@@ -61,7 +61,7 @@ class SwapViewController: BSViewController {
 extension SwapViewController: KolodaViewDelegate {
     func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
         //Example: reloading
-        bookKolodaView.resetCurrentCardNumber()
+        downloadNearbyBooks()
     }
     
     func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
@@ -87,6 +87,17 @@ extension SwapViewController: KolodaViewDelegate {
         animation.springBounciness = frameAnimationSpringBounciness
         animation.springSpeed = frameAnimationSpringSpeed
         return animation
+    }
+    
+    func koloda(koloda: KolodaView, didSwipedCardAtIndex index: UInt, inDirection direction: SwipeResultDirection) {
+        if direction == .Right {
+            bookViewModel.selectedBook = bookViewModel.books![Int(index)]
+            bookViewModel.wantBook { (error) -> Void in
+                if (error != nil) {
+                    
+                }
+            }
+        }
     }
 }
 
