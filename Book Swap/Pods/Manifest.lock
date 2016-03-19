@@ -16,6 +16,7 @@ PODS:
   - HanekeSwift (0.10.1)
   - Koloda (2.0.10):
     - pop (~> 1.0)
+  - PKHUD (3.1.0)
   - pop (1.0.9)
   - PromiseKit/CorePromise (3.0.3)
   - RAMAnimatedTabBarController (1.2.2)
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Gloss (~> 0.7)
   - HanekeSwift (~> 0.10)
   - Koloda (~> 2.0)
+  - PKHUD (~> 3.1)
   - PromiseKit/CorePromise (~> 3.0)
   - RAMAnimatedTabBarController (~> 1.2.2)
   - SnapKit (~> 0.16)
@@ -48,6 +50,7 @@ SPEC CHECKSUMS:
   Gloss: e674d7aa06a7e292a591d0d39a759b826daf503e
   HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
   Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
+  PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   PromiseKit: 00ec2a219bf5ad2833f95977698e921932b8dfd3
   RAMAnimatedTabBarController: cadbef3162bc7ae86091661273ccec503deb3398
