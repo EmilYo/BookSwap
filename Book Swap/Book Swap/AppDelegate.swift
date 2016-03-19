@@ -71,7 +71,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        //TODO: impelent
+        let alertController = UIAlertController(title: L10n.LocNewMatchFoundNotificationTitle.string, message: L10n.LocNewMatchFoundNotifiactionMessage.string, preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: L10n.LocNo.string, style: .Default) { (UIAlertAction) -> Void in
+            
+        }
+        alertController.addAction(cancelAction)
+        let yesAction = UIAlertAction(title: L10n.LocYes.string, style: .Cancel) { (UIAlertAction) -> Void in
+            //TODO: przełączyć na wymiany
+        }
+        alertController.addAction(yesAction)
+        
+        window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
     }
 }
 

@@ -41,10 +41,12 @@ enum L10n {
   case LocMyBooksEmpty
   /// Znajdź interesujące Cię książki
   case LocWantedEmpty
-  /// Brak ksiązek w okolicy
+  /// Brak książek w okolicy
   case LocSwapEmpty
-  /// Możliwa wymiana \"%@\" za \"%@\" z użytkownikiem %@.
-  case LocMatchLabel(String, String, String)
+  /// Nowa propozycja zamiany książek.
+  case LocNewMatchFoundNotificationTitle
+  ///  Czy chcesz zobaczyć ją teraz?
+  case LocNewMatchFoundNotifiactionMessage
 }
 
 extension L10n: CustomStringConvertible {
@@ -92,8 +94,10 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_wanted_empty")
       case .LocSwapEmpty:
         return L10n.tr("loc_swap_empty")
-      case .LocMatchLabel(let p0, let p1, let p2):
-        return L10n.tr("loc_match_label", p0, p1, p2)
+      case .LocNewMatchFoundNotificationTitle:
+        return L10n.tr("loc_new_match_found_notification_title")
+      case .LocNewMatchFoundNotifiactionMessage:
+        return L10n.tr("loc_new_match_found_notifiaction_message")
     }
   }
 

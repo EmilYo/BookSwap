@@ -20,6 +20,7 @@
 
 "loc_my_books_empty" = "Dodaj książki";
 "loc_wanted_empty" = "Znajdź interesujące Cię książki";
-"loc_swap_empty" = "Brak ksiązek w okolicy";
+"loc_swap_empty" = "Brak książek w okolicy";
 
-"loc_match_label" = "Możliwa wymiana \"%@\" za \"%@\" z użytkownikiem %@.";
+"loc_new_match_found_notification_title" = "Nowa propozycja zamiany książek.";
+"loc_new_match_found_notifiaction_message" = " Czy chcesz zobaczyć ją teraz?";
