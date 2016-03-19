@@ -30,6 +30,8 @@
 		8E9860091C9CC83700E9B4F4 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9860081C9CC83700E9B4F4 /* GradientView.swift */; };
 		8EDC2E4B1C9CD12E009E643B /* AddBookNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC2E4A1C9CD12E009E643B /* AddBookNavigationController.swift */; };
 		8EDC2E4D1C9CD14E009E643B /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC2E4C1C9CD14E009E643B /* AddBookViewController.swift */; };
+		8EDC2E4F1C9CE3C0009E643B /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC2E4E1C9CE3C0009E643B /* MatchModel.swift */; };
+		8EDC2E511C9CE476009E643B /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDC2E501C9CE476009E643B /* MatchViewModel.swift */; };
 		8EECF43D1C9C6A3E00D93C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */; };
 		8EECF4421C9C6A3F00D93C62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4401C9C6A3F00D93C62 /* Main.storyboard */; };
 		8EECF4441C9C6A3F00D93C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EECF4431C9C6A3F00D93C62 /* Assets.xcassets */; };
@@ -90,6 +92,8 @@
 		8E9860081C9CC83700E9B4F4 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8EDC2E4A1C9CD12E009E643B /* AddBookNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookNavigationController.swift; sourceTree = "<group>"; };
 		8EDC2E4C1C9CD14E009E643B /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		8EDC2E4E1C9CE3C0009E643B /* MatchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		8EDC2E501C9CE476009E643B /* MatchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		8EECF4391C9C6A3E00D93C62 /* Book Swap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Book Swap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EECF43C1C9C6A3E00D93C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EECF4411C9C6A3F00D93C62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				8E3167131C9C7B78001A20E6 /* UserModel.swift */,
 				8E3167211C9C9568001A20E6 /* BookModel.swift */,
 				8E3167231C9C96A1001A20E6 /* AuthorModel.swift */,
+				8EDC2E4E1C9CE3C0009E643B /* MatchModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			children = (
 				8E3167151C9C7B89001A20E6 /* UserViewModel.swift */,
 				8E3167251C9C972F001A20E6 /* BookViewModel.swift */,
+				8EDC2E501C9CE476009E643B /* MatchViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -302,9 +308,9 @@
 		E25DE6961C9C737F00EEDCD4 /* Wanted */ = {
 			isa = PBXGroup;
 			children = (
+				E25DE69B1C9C73CC00EEDCD4 /* Wanted.storyboard */,
 				E25DE6971C9C73B100EEDCD4 /* WantedNavigationController.swift */,
 				E25DE6991C9C73C100EEDCD4 /* WantedViewController.swift */,
-				E25DE69B1C9C73CC00EEDCD4 /* Wanted.storyboard */,
 			);
 			name = Wanted;
 			sourceTree = "<group>";
@@ -523,9 +529,11 @@
 				E25DE6C61C9CDC4B00EEDCD4 /* EmptyBookView.swift in Sources */,
 				8E12B2E71C9C77A700CD574F /* ImagesGen.swift in Sources */,
 				8E12B2E91C9C77A700CD574F /* StringsGen.swift in Sources */,
+				8EDC2E4F1C9CE3C0009E643B /* MatchModel.swift in Sources */,
 				E25DE6931C9C734C00EEDCD4 /* MyBooksNavigationController.swift in Sources */,
 				E25DE6911C9C732C00EEDCD4 /* MyBooksViewController.swift in Sources */,
 				E25DE6B21C9C755C00EEDCD4 /* ProfileViewController.swift in Sources */,
+				8EDC2E511C9CE476009E643B /* MatchViewModel.swift in Sources */,
 				E25DE6C21C9CA7FF00EEDCD4 /* Appearance.swift in Sources */,
 				E25DE6A91C9C751700EEDCD4 /* MatchNavigationController.swift in Sources */,
 				E25DE6B61C9C854100EEDCD4 /* BookKolodaView.swift in Sources */,
