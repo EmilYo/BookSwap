@@ -9,12 +9,23 @@
 import UIKit
 
 class WantedViewController: BSViewController {
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.registerNib(UINib(nibName: BookCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: BookCollectionViewCell.identifier)
+        }
+    }
 
+    private var bookViewModel = BookViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = L10n.LocTabWanted.string
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,6 +33,15 @@ class WantedViewController: BSViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loadData() {
+        bookViewModel.wantedBooks { (error) -> Void in
+            if error != nil {
+                //TODO: Handle error
+            } else {
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
     /*
     // MARK: - Navigation
@@ -34,3 +54,40 @@ class WantedViewController: BSViewController {
     */
 
 }
+
+extension WantedViewController: UICollectionViewDataSource {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return bookViewModel.books?.count ?? 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(BookCollectionViewCell.identifier, forIndexPath: indexPath) as? BookCollectionViewCell
+        let book = bookViewModel.books?[indexPath.row]
+        cell?.imageView.hnk_cancelSetImage()
+        cell?.imageView.hnk_setImageFromURL(book!.cover)
+        cell?.titleLabel.text = book?.title
+        cell?.authorLabel.text = book?.author
+        
+        return cell!
+    }
+}
+
+extension WantedViewController: UICollectionViewDelegate {
+    
+}
+
+extension WantedViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let width = collectionView.frame.width / 2
+        return CGSize(width: width - 14, height: width / 3 * 4)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 8, bottom: 5, right: 8)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 2
+    }
+}
+

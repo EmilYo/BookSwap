@@ -17,6 +17,8 @@ enum L10n {
   case LocLoginTitle
   /// Add book
   case LocAddBookTitle
+  /// Wymieniaj książki z ludźmi z twoje okolicy.
+  case LocLoginLabel
 }
 
 extension L10n: CustomStringConvertible {
@@ -38,6 +40,8 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_login_title")
       case .LocAddBookTitle:
         return L10n.tr("loc_add_book_title")
+      case .LocLoginLabel:
+        return L10n.tr("loc_login_label")
     }
   }
 
