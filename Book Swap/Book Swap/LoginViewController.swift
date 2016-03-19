@@ -60,6 +60,7 @@ extension LoginViewController: FBSDKLoginButtonDelegate {
                     if error != nil {
                         //TODO: handle error
                     } else {
+                        NSNotificationCenter.defaultCenter().postNotificationName(Constans.NotificationKey.UserLogged.rawValue, object: nil)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 })

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="233" height="236"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sna-bD-nVN" customClass="GradientView" customModule="Book_Swap" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="136" width="233" height="100"/>
+                        <rect key="frame" x="0.0" y="118" width="233" height="118"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ify-AK-qbF">
-                                <rect key="frame" x="8" y="46" width="217" height="20.5"/>
+                                <rect key="frame" x="8" y="57.5" width="217" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9r-We-3xk">
-                                <rect key="frame" x="8" y="74.5" width="217" height="17"/>
+                                <rect key="frame" x="8" y="86" width="217" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -35,9 +36,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ify-AK-qbF" secondAttribute="trailing" constant="8" id="928-dH-TBl"/>
-                            <constraint firstAttribute="bottom" secondItem="a9r-We-3xk" secondAttribute="bottom" constant="8" id="EaK-QP-ZTq"/>
+                            <constraint firstAttribute="bottom" secondItem="a9r-We-3xk" secondAttribute="bottom" constant="15" id="EaK-QP-ZTq"/>
                             <constraint firstItem="a9r-We-3xk" firstAttribute="leading" secondItem="sna-bD-nVN" secondAttribute="leading" constant="8" id="FaD-jq-ctu"/>
-                            <constraint firstAttribute="height" constant="100" id="cFP-HZ-0EP"/>
                             <constraint firstItem="ify-AK-qbF" firstAttribute="leading" secondItem="sna-bD-nVN" secondAttribute="leading" constant="8" id="clf-qH-7gn"/>
                             <constraint firstAttribute="trailing" secondItem="a9r-We-3xk" secondAttribute="trailing" constant="8" id="hbI-VD-O6j"/>
                             <constraint firstItem="a9r-We-3xk" firstAttribute="top" secondItem="ify-AK-qbF" secondAttribute="bottom" constant="8" id="sKx-kd-mL6"/>
@@ -48,6 +48,7 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="aKK-ow-l0c" secondAttribute="bottom" id="40z-bq-gpc"/>
+                <constraint firstItem="sna-bD-nVN" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.5" id="5rG-73-bEG"/>
                 <constraint firstItem="aKK-ow-l0c" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7aK-CH-LOT"/>
                 <constraint firstAttribute="trailing" secondItem="aKK-ow-l0c" secondAttribute="trailing" id="FYm-pa-T0g"/>
                 <constraint firstItem="sna-bD-nVN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WRs-xy-gWx"/>

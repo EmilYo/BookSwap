@@ -17,4 +17,9 @@ struct Constans {
         case UserToken = "UserToken"
         case ApnToken = "ApnToken"
     }
+    
+    enum NotificationKey: String {
+        case BookAdded = "BookAdded"
+        case UserLogged = "UserLogged"
+    }
 }

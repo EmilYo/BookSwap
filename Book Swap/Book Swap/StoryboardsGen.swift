@@ -102,4 +102,7 @@ struct StoryboardScene {
 }
 
 struct StoryboardSegue {
+  enum MyBooks: String, StoryboardSegueType {
+    case PresentAddBookNavigationController = "PresentAddBookNavigationController"
+  }
 }
