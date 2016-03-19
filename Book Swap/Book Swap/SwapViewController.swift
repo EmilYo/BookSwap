@@ -123,7 +123,7 @@ extension SwapViewController: KolodaViewDataSource {
                 return UInt(books.count)
             }
         }
-        showEmptyView("Brak ksiązek w okolicy")
+        showEmptyView(L10n.LocSwapEmpty.string)
         return 0
         
     }

@@ -49,6 +49,9 @@ class MyBooksViewController: BSViewController {
             if error != nil {
                 //TODO: Handle error
             } else {
+                if (self.bookViewModel.books?.count > 0) {
+                    self.hideEmptyView()
+                }
                 self.collectionView.reloadData()
             }
         }
@@ -100,6 +103,11 @@ class MyBooksViewController: BSViewController {
 
 extension MyBooksViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let books = bookViewModel.books {
+            if books.count == 0 {
+                showEmptyView(L10n.LocMyBooksEmpty.string)
+            }
+        }
         return bookViewModel.books?.count ?? 0
     }
     

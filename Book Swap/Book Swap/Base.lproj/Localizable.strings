@@ -1,8 +1,8 @@
-"loc_tab_my_books" = "My Books";
-"loc_tab_wanted" = "Wanted";
-"loc_tab_swap" = "Swap";
-"loc_tab_match" = "Match";
-"loc_tab_profile" = "Profile";
+"loc_tab_my_books" = "Mam";
+"loc_tab_wanted" = "Chce";
+"loc_tab_swap" = "Odkryj";
+"loc_tab_match" = "Wymiany";
+"loc_tab_profile" = "Profil";
 
 "loc_login_title" = "Login";
 "loc_add_book_title" = "Add book";
@@ -11,3 +11,6 @@
 "loc_yes" = "Tak";
 "loc_no" = "Nie";
 "loc_trash_book_message" = "Czy napewno chcesz usunąć tą książkę?";
+
+"loc_my_books_empty" = "Dodaj książki";
+"loc_swap_empty" = "Brak ksiązek w okolicy";

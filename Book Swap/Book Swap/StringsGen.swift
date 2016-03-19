@@ -3,21 +3,21 @@
 import Foundation
 
 enum L10n {
-  /// My Books
+  /// Mam
   case LocTabMyBooks
-  /// Wanted
+  /// Chce
   case LocTabWanted
-  /// Swap
+  /// Odkryj
   case LocTabSwap
-  /// Match
+  /// Wymiany
   case LocTabMatch
-  /// Profile
+  /// Profil
   case LocTabProfile
   /// Login
   case LocLoginTitle
   /// Add book
   case LocAddBookTitle
-  /// Warning!
+  /// Uwaga!
   case LocWarning
   /// Tak
   case LocYes
@@ -25,6 +25,10 @@ enum L10n {
   case LocNo
   /// Czy napewno chcesz usunąć tą książkę?
   case LocTrashBookMessage
+  /// Dodaj książki
+  case LocMyBooksEmpty
+  /// Brak ksiązek w okolicy
+  case LocSwapEmpty
 }
 
 extension L10n: CustomStringConvertible {
@@ -54,6 +58,10 @@ extension L10n: CustomStringConvertible {
         return L10n.tr("loc_no")
       case .LocTrashBookMessage:
         return L10n.tr("loc_trash_book_message")
+      case .LocMyBooksEmpty:
+        return L10n.tr("loc_my_books_empty")
+      case .LocSwapEmpty:
+        return L10n.tr("loc_swap_empty")
     }
   }
 
