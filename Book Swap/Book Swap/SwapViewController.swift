@@ -29,9 +29,12 @@ class SwapViewController: BSViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Refresh, target: self, action: "downloadNearbyBooks")
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "receivedNotifications:", name: Constans.NotificationKey.UserLogged.rawValue, object: nil)
-
-        downloadNearbyBooks()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        downloadNearbyBooks()
     }
     func configureBookKolodaView() {
         bookKolodaView.alphaValueSemiTransparent = kolodaAlphaValueSemiTransparent
